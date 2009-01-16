@@ -1,0 +1,1346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<title>Dueces at REPEAT Box Score: Week 10 - ESPN Fantasy Football 2008</title>
+<!-- Page Served by Machine 57.WOC.PROD on Port 4439 -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate, proxy-revalidate, maxage=0">
+<meta http-equiv="Expires" content="-1">
+
+
+<script type="text/javascript">
+/* omniture ad tracking v0.1 24Jun08 */
+var anAds;
+anAds="";
+function anPassAds(str) {
+	anAds=anAds?anAds+",ads;"+str+";;;event38=1":"ads;"+str+";;;event38=1";
+}
+</script>
+<style type="text/css">
+@import url(http://assets.espn.go.com/insertfiles/css/design06/universalLogin.css);</style><link rel="stylesheet" type="text/css" href="http://games-ak.espn.go.com/ffl/static/css/main?v=10"><style type="text/css">
+
+
+.gu_head {
+	background: url(http://games-ak.espn.go.com/s/ffllm/05/images/gameupdate/gameupdate_06.jpg); 
+	background-repeat: no-repeat;
+	width: 114px;
+	height: 24px;
+	overflow: hidden;
+	float: left;
+	display: inline;
+
+	}
+.gu_head strong {
+	font-family: verdana, helvetica, san-serif;
+	color: #ffcc33;
+	font-size: 12px;
+	line-height: 22px;
+	padding: 0px 0px 0px 5px;
+	}
+	
+.gu_score {
+	font-family: verdana, helvetica, san-serif;
+	font-size: 10px;
+	line-height: 10px;
+	color: #333;
+	background: #fff;
+	border: 1px solid #ccc;
+	margin: 5px;
+	}
+	
+.gu_scoretext {
+	font-family: verdana, helvetica, san-serif;
+	font-size: 10px;
+	line-height: 12px;
+	color: #333;
+	border: 1px solid #ccc;
+	background: #c9d4b2;
+	padding: 5px;
+	}
+	
+#gu_footer{
+	background: url(http://games-ak.espn.go.com/s/ffllm/05/images/gameupdate/footer_03.gif); 
+	width: 132px; 
+	height: 25px; 
+	background-repeat: no-repeat; 
+	display: inline; 
+	float: left; 
+	text-align: center;
+	}
+
+#toastDiv {
+	width: 496px;
+	height: 126px;
+	color: #fff;
+	font-family: Helvetica, Verdana, sans-serif;
+	font-size: 12pt;
+	padding: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 90;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="http://games-ak.espn.go.com/s/ffllm/07/images/toastbg.png");
+}
+
+#toastDiv[id="toastDiv"] {
+	background: url(http://games-ak.espn.go.com/s/ffllm/07/images/toastbg.png) no-repeat;
+	filter: none;
+}
+
+#coverDiv {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 496px;
+	height: 126px;
+	z-index: 100;	
+}
+
+#toastDivHomeTeam {	
+	position: absolute;
+	top: 61px;
+	left: 40px;
+	text-transform: uppercase;
+}
+#toastDivHomeTeamScore {
+	position: absolute;
+	top: 61px;
+	left: 196px;
+	width: 40px;
+	text-align: right;
+}
+#toastDivAwayTeam {
+	position: absolute;
+	top: 31px;
+	left: 40px;
+	text-transform: uppercase;
+}
+#toastDivAwayTeamScore {
+	position: absolute;
+	top: 31px;
+	left: 196px;
+	width: 40px;
+	text-align: right;
+}
+#toastDivGameStatus {
+	position: absolute;
+	top: 68px;
+	left: 277px;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-style: italic;
+}
+#toastDivGameMessage {
+	position: absolute;
+	top: 27px;
+	left: 277px;
+	font-family: Verdana;
+	font-size: 8pt;
+	right: 9px;
+}</style>
+<style type="text/css">
+
+
+#chatContainer {
+	padding: 13px;
+}
+
+#chatTable {
+	border: 1px solid #cad1d7;
+	margin: 0; 
+}
+
+.smackboardTitle {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	font-family: Helvetica, Arial;
+	color: #000;
+}
+
+#chatUsersCell {
+	width: 168px;
+	background: url('http://games-ak.espn.go.com/s/ffllm/07/images/chat/back_users.jpg') no-repeat;
+	border-left: 1px solid #cad1d7;
+	height: 100%;
+	vertical-align: top;
+	padding: 0px;
+}
+
+#chatUsers {
+	scroll: auto;
+	line-height: 17px;
+	padding: 10px;
+}
+
+#chatDivCell {
+	vertical-align: top;
+	padding: 0px;
+	background: url('http://games-ak.espn.go.com/s/ffllm/07/images/chat/back_main.jpg') repeat-x;
+}
+
+#chatDiv{
+	overflow: auto;
+	word-wrap: break-word;
+	padding: 10px;
+}
+
+#chatInput {
+	width: 579px;
+	height: 23px;
+	line-height: 23px;
+	margin: 0px;
+	border: 1px solid #cad1d7;
+	float: left;
+	padding: 3px 0 0 5px;
+}
+
+.chatMessage {
+	margin: 3px 0 3px 0;
+	line-height: 15px;
+}
+
+.chatUserLeft {
+	color: #999;
+}
+
+.chatUserJoined {
+	font-weight: bold;
+}
+
+#chatState {
+	color: #94acb6;
+	margin: 5px 0 5px 0;
+	font-style: italic;
+	font-size: 9px;
+	font-family: Verdana;
+}
+
+#betaDiv {
+	display: inline;
+	margin-left: 0px;
+	width:41px;
+}
+
+#chatEnableDisable {
+	float: right;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: Verdana;
+	margin: 7px 3px 0 0;
+}
+
+#chatSubmitDiv {
+	margin-left: 10px;
+	float: left;
+}
+
+#chatSubmitButton {
+	display: block;
+	overflow: hidden;
+	width: 53px;
+	height: 28px;
+	background: url('http://games-ak.espn.go.com/s/ffllm/08/images/chat/btnMap2.gif') no-repeat scroll 0%;
+}
+
+#chatSubmitButton.chatSubmitButtonDisabled {
+	background-position:-106px 50%;
+	cursor: default;
+}
+
+#chatSubmitButton.chatSubmitButtonEnabled {
+	background-position:-53px 50%;
+}
+
+#chatSubmitButton.chatSubmitButtonEnabled:hover {
+	background-position:0px 50%;
+}
+
+#connectingSpinner {
+	
+}</style>
+
+<style type="text/css">
+.maincontainertblcell, .maincontainertbl { background: none; }
+</style>
+
+
+<script type="text/javascript">
+<!---
+if (navigator.userAgent.toLowerCase().indexOf('webtv') > -1) {
+	top.location.replace('http://games.espn.go.com/s/lm/browserupgrade.html');
+} else if (!document.getElementById) {
+	top.location.replace('http://games.espn.go.com/s/lm/browserupgrade.html');
+}
+//-->
+</script>
+<script type="text/javascript" src="http://games-ak.espn.go.com/s/ffllm/08/js/lm_main_10.js"></script>
+<script type="text/javascript" src="http://games-ak.espn.go.com/s/ffllm/08/js/lm_libraries_1_2_8.js"></script>
+<script type="text/javascript" src="http://games-ak.espn.go.com/s/ffllm/08/js/shell_redesign_06.js"></script>
+<script type="text/javascript" src="http://a.espncdn.com/prod/scripts/registration/myEspn.min.200901091347.js"></script>
+<script type="text/javascript">
+com.espn.env.host = 'games.espn.go.com';
+
+com.espn.games.gameRoot = 'ffl';
+com.espn.games.leagueId = 97031;
+com.espn.games.seasonId = 2008;
+com.espn.games.toTeamId = 5;
+com.espn.games.fromTeamId = 8;
+com.espn.games.useAdServer = true;
+com.espn.games.isLeagueManager = false;
+com.espn.games.isLeagueCreator = false;
+com.espn.games.isLeagueMember = true;
+com.espn.games.username = 'sean23007';
+var host = "games.espn.go.com";
+var gameRoot = "ffl";var leagueId = 97031;var teamId = 8;
+var GAMEROOT = "ffl";
+
+
+
+var xmlLink = "format/playerTableXML";
+var popUpItr = 0;
+
+function playerTable(context, view) {
+
+	var scoringPeriodId = 10;
+	
+	var paramArr = Array(Array("parentContext", context), Array("scoringPeriodId", scoringPeriodId));
+	paramStr = getURLParam(paramArr);
+	
+	
+	var _complete = function(t) {
+		loadPopUp();
+	}
+	
+	var url = "http://" + host + "/" + gameRoot + "/" + xmlLink + paramStr + noCache();
+	if (context == "rosterfix") url += "&" + view;
+	new Ajax.Updater('pagedata', url, {method:'post', onComplete: _complete, evalScripts: true});
+
+}
+	
+var time0 = 0;
+
+function players(navParams) {
+	
+	var spinnerEl = $("playerTableTabSpinner");
+	if (spinnerEl) spinnerEl.show();
+	var realtimeScoringDiv = $('realtimeScoringTools');
+	
+	var version = null;
+	var params = navParams.split("&");
+	var parentContext = null;
+	var view = null;
+	var scoringPeriodId = null;
+	for (var i = 0; i < params.length; i++) {
+		var paramArr = params[i].split("=");
+		if (paramArr.length > 1) {
+			if (paramArr[1].indexOf("yourPlayers") > -1) {
+				version = "yourPlayers";
+			} else if  (paramArr[1].indexOf("incomingPlayers") > -1) {
+				version = "incomingPlayers";
+			}
+		}
+		if (paramArr[0] == "parentContext") parentContext = paramArr[1];
+		else if (paramArr[0] == "view") view = paramArr[1];
+		else if (paramArr[0] == "scoringPeriodId") {
+			scoringPeriodId = parseInt(paramArr[1]);
+			if (realtimeScoringDiv) {
+				parseInt(paramArr[1]) == 18 ? realtimeScoringDiv.show() : realtimeScoringDiv.hide();
+			}
+		}
+	}
+	
+	var _complete = function(t) {
+			
+		loadPopUp();
+		
+		
+		/* here would would be a good place for omniture code */
+		
+		
+		
+		if (spinnerEl) spinnerEl.hide();
+		if (chooser) { chooser.isOpen = false; chooser.getObjs(); }
+	}
+	var url = "http://" + host + "/" + gameRoot + "/" + xmlLink + "?" + navParams + noCache();
+
+	var target = "pagedata";
+	if (version != null) target += "_" + version;
+	
+	time0 = new Date().getTime();
+	var confirmed = true;
+	
+		
+	if (confirmed) new Ajax.Updater(target, url, {method:'post', onComplete: _complete, evalScripts: false});
+	else if (spinnerEl) spinnerEl.hide();
+	
+	
+}
+
+function loadPopUp() {
+
+	Behaviour.apply();
+	
+}
+
+function noCache() {
+	return "&r=" + Math.round(Math.random() * 99999999);
+}
+
+
+
+function getURLParam(newParams){
+	
+	var strReturn = "";
+	var strHref = window.location.href;
+	
+	// REMOVE HASH
+	hashIndex = strHref.indexOf("#");
+	if (hashIndex > -1) {
+		strHref = strHref.substr(0, hashIndex);
+	}
+	
+	
+	if (strHref.indexOf("?") > -1 ){
+		
+		var strQueryString = strHref.substr(strHref.indexOf("?"));
+		var aQueryString = strQueryString.split("&");
+		
+		// LOOP THROUGH CURRENT PARAMS
+		for (var i = 0; i < aQueryString.length; i++ ){
+		
+			var match = false;
+			
+			// LOOP THROUGH PARAMS THAT NEED TO BE REPLACED OR ADDED
+			for(var j = 0; j < newParams.length; j++) {
+				
+				// PARAM MATCH?  IF SO, MARK
+				if (aQueryString[i].indexOf(newParams[j][0] + "=") > -1 ){
+					match = true;
+					break;
+				}
+				
+			}
+			
+			// IF NO MATCH, SAVE PARAM.  IF MATCH, SKIP
+			if (!match) {
+				strReturn += aQueryString[i] + "&";
+			}
+			
+		}
+		
+	}
+	
+	// ADD IN NEW PARAMS TO END
+	var amp = "";
+	for (var j = 0; j < newParams.length; j++) {
+		//alert(newParams[j][0] + " = " + newParams[j][1]);
+		strReturn += amp + newParams[j][0] + "=" + newParams[j][1];
+		amp = "&";
+	}
+	
+	
+	//alert(strReturn);
+	return strReturn;
+	
+}
+
+
+function submitTradeReview() {
+	
+	$("tradeReviewForm").submit();
+	
+}
+
+function getRosterEditErrors() {
+
+}
+
+function displayRosterEditErrors(request) {
+	
+}
+
+function showErrorMessageDiv (event) {
+	
+}
+
+function hideErrorMessageDiv () {
+
+}
+
+
+function findPos(obj) {
+	var curleft = curtop = 0;
+	if (obj.offsetParent) {
+		curleft = obj.offsetLeft
+		curtop = obj.offsetTop
+		while (obj = obj.offsetParent) {
+			curleft += obj.offsetLeft
+			curtop += obj.offsetTop
+		}
+	}
+	return [curleft,curtop];
+}
+
+StatChooser = Class.create();
+
+StatChooser.prototype = {
+
+	isOpen: false,
+	statForm: null,
+	chooserDiv: null,
+	chooserLink: null,
+	
+	initialize: function() { },
+	
+	updateCookie: function(playerParams) {
+		var formEls = this.statForm.elements;
+
+		var pipe = "";
+		var statIdsToShow = "";
+		var thisEl;
+
+		for (var i=0; i < formEls.length; i++) {
+			thisEl = formEls[i];
+			if (thisEl.name == "chooseLeagueStatsToDisplayChoice" && thisEl.type == "checkbox") {
+				if (thisEl.checked) {
+					statIdsToShow += pipe + thisEl.value;
+					pipe = "|";
+				}
+			}
+		}
+
+		var success = function(t){
+			players(playerParams);
+		}
+		var failure = function(t){ }
+
+		//GET LEAGUEID FROM PARAMS
+		var params = playerParams.split("&");
+		var leagueId = -1;
+		for (var i = 0; i < params.length; i++) {
+			var paramArr = params[i].split("=");
+			if (paramArr[0] == "leagueId") {
+				leagueId = paramArr[1];
+				break;
+			}
+		}	
+		
+		var url = "http://" + host + "/" + gameRoot + "/" + "util/saveLeagueStatsToDisplayToCookie?leagueId=" + leagueId + "&show=" + statIdsToShow + noCache();
+		var myAjax = new Ajax.Request(url, {method:'get', onSuccess:success, onFailure:failure}); 
+	},
+	
+	clearCookie: function(playerParams) {
+		var success = function(t){ players(playerParams); }
+		var failure = function(t){ }
+
+		//GET LEAGUEID FROM PARAMS
+		var params = playerParams.split("&");
+		var leagueId = -1;
+		for (var i = 0; i < params.length; i++) {
+			var paramArr = params[i].split("=");
+			if (paramArr[0] == "leagueId") {
+				leagueId = paramArr[1];
+				break;
+			}
+		}
+
+		var url = "http://" + host + "/" + gameRoot + "/" + "util/clearLeagueStatsToDisplayCookie?leagueId=" + leagueId + noCache();
+		var myAjax = new Ajax.Request(url, {method:'get', onSuccess:success, onFailure:failure});
+	},
+	
+	getObjs: function() {
+		this.statForm = $('chooseLeagueStatsToDisplayForm');
+		this.chooserDiv = $('chooseLeagueStatsToDisplayDiv');
+		this.chooserLink = $('chooseLeagueStatsToDisplayLink');
+	},
+	
+	toggle: function() {
+		if (!this.statForm || !this.chooserDiv || !this.chooserLink) this.getObjs();
+			
+		if (this.isOpen) this.chooserDiv.hide();
+		else { 
+			var location = findPos(this.chooserLink);
+			this.chooserDiv.style.left = (location[0]-115)+"px";
+			this.chooserDiv.style.top = (location[1]+13)+"px";
+			this.chooserDiv.show();
+		}
+		this.isOpen = !this.isOpen;
+	}
+
+}
+
+var chooser = new StatChooser();
+
+
+Poll = Class.create();
+Poll.barImagePath = 'http://games-ak.espn.go.com/s/ffllm/08/images/pollBar.gif';
+Poll.theMonths = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+Poll.today = new Date();
+
+Poll.prototype = {
+	
+	pollCode: -1,
+	isTeamVoting: false,
+	pollResponse: null,
+	isPassive: true,
+	isAllowedToVote: true,
+	options: [],
+	votes: [],
+	maxBarWidth: 0,
+	responseUrl: '',
+	selectedOption: null,
+		
+	barWidth: 0,
+	pollBodyElementName: '',
+	pollOptionsElementName: '',
+	pollSelOptionElementName: '',
+	
+	initialize: function(args) {	
+	
+		this.pollCode = args.pollCode;
+		this.isTeamVoting = args.isTeamVoting;
+		this.isPassive = args.isPassive;
+		this.isAllowedToVote = args.isAllowedToVote;
+		this.maxBarWidth = args.maxBarWidth;
+		this.responseUrl = args.responseUrl;
+		this.options = args.options;
+		this.votes = args.votes;
+		this.pollResponse = args.pollResponse;
+		
+		preloadImage = new Image(1, 10); 
+      		preloadImage.src=Poll.barImagePath; 
+		
+		if (this.pollResponse != null && this.pollResponse.vote < 0) {
+			this.pollResponse = null;
+		}
+
+		this.pollBodyElementName = 'poll' + this.pollCode + '_body';	
+		this.pollOptionsElementName = 'poll' + this.pollCode + '_options';
+		this.pollSelOptionElementName = 'poll' + this.pollCode + '_selOpt';	
+		
+		this.render();		
+	},
+
+	render:function() {
+			
+		if (this.pollResponse != null || !this.isAllowedToVote || this.isPassive) {
+
+			this.renderResultsView();
+		} else {		
+
+			this.renderVoteView();			
+		}
+	},
+	
+	vote: function() {
+
+		if (this.selectedOption > -1) {
+		
+			this.pollResponse = new PollResponse(this.selectedOption);
+			v = this.pollResponse.vote
+			if (this.isAllowedToVote) {
+				
+				this.votes[this.selectedOption]++;
+				this.render();
+				window.location.href = this.responseUrl + v;
+			}
+		} 
+		
+	},
+	
+	renderResultsView: function() {
+		var newHtml = '';
+		var totalVotes = 0;
+		
+		for(i = 0; i < this.votes.length; i++) {
+			totalVotes += this.votes[i];
+		}
+		
+		Element.update(this.pollBodyElementName, '');
+	
+		for(var ct = 0; ct < this.options.length; ct++) {
+			var opt = this.options[ct];
+			if (this.votes[ct] == 0) {
+				var barWidth = 1;
+				var votePct = 0;
+			} else {
+				var barWidth = Math.max(Math.round(this.maxBarWidth * (this.votes[ct] / totalVotes)), 1);
+				var votePct = Math.round((100 / totalVotes) * this.votes[ct]);
+			}
+			var plural = (this.votes[ct] != 1 ? 's' : '');
+			newHtml += '<div style="display:block;margin-top:8px;">';
+			if (this.votes[ct] > 0) {
+				newHtml += '<img src="' + Poll.barImagePath + '" height="10" width="' + barWidth + '" border="0" /> ';
+			}
+			newHtml += votePct + '%<br />' + opt;
+			if (this.pollResponse != null && this.pollResponse.vote == ct) {
+				newHtml += '*';
+			}
+			newHtml += ' <nobr>(' + this.votes[ct] + ' vote' + plural + ')</nobr></div>';
+		}
+		
+		newHtml += '<div style="display:block;margin-top:16px;">'
+		if (this.pollResponse != null) {
+			newHtml += '<em>You';			
+			//if (userResponse != null and user.userProfile.userProfileId != userResponse.userProfileId) { 
+			//	newHtml += 'r team' 
+			//} 			
+			newHtml += ' voted on ' + this.pollResponse.voteDate + '</em><br>';
+		} 
+		
+		newHtml += 'Total Votes: ' + totalVotes + '&nbsp;&nbsp;(One per ';
+		if(this.isTeamVoting) { 
+			newHtml += 'Team' 
+		} else { 
+			newHtml += 'Owner' 
+		}; 
+		newHtml += ')</div>';	
+		new Insertion.Bottom($(this.pollBodyElementName), newHtml);
+		//Element.update(this.pollBodyElementName, newHtml);
+	},
+	
+	renderVoteView: function() {
+		var _this = this;
+		Element.update(this.pollBodyElementName, '');
+		
+		for(var ct = 0; ct < this.options.length; ct++) {
+			radioId = this.pollOptionsElementName + ct;
+		
+			newHtml = '<input name="' + this.pollOptionsElementName + '" id="' + radioId + '" type="radio" value="' + ct + '" >' + this.options[ct] + '<br />\n';	
+			new Insertion.Bottom($(this.pollBodyElementName), newHtml);		
+			
+			$(radioId).onclick = function () {
+				_this.selectedOption = this.value;
+			}
+		}
+		new Insertion.Bottom($(this.pollBodyElementName), '<br />');
+		
+		var voteButton = document.createElement('INPUT');
+		voteButton.value = 'Vote!';
+		voteButton.type = 'button';
+		voteButton.className = 'sidebar';
+		voteButton.onclick = function (event) {   
+			_this.vote();
+		};		
+		$(this.pollBodyElementName).appendChild(voteButton);
+			
+		newHtml = '<br />(One vote per ';		
+		if(this.isTeamVoting) { newHtml += 'Team' } else { newHtml += 'Owner' }; 
+		newHtml += ')';
+		
+		new Insertion.Bottom($(this.pollBodyElementName), newHtml);	
+	}
+}
+
+
+PollResponse = Class.create();
+PollResponse.prototype = {
+
+	vote: -1,
+	voteDate: Poll.theMonths[Poll.today.getMonth()] + ' ' + Poll.today.getDate(),
+	
+	initialize: function(vote, voteDate) {
+		this.vote = vote;
+		if (voteDate == null) {
+			this.voteDate = Poll.theMonths[Poll.today.getMonth()] + ' ' + Poll.today.getDate();
+		} else {
+			this.voteDate = voteDate;
+		}
+	}
+
+}
+
+
+function toggleBench(action, tmCount) {
+	for (n=0;n<tmCount;n++) {
+		if (action == 'show') {
+			hide('benchShowLink' + n);
+			show('bench' + n);
+		} else {
+			hide('bench' + n);
+			show('benchShowLink' + n);
+		}
+	}
+}</script>
+<script type="text/javascript"></script></head>
+<body class="trans-fantasy">
+<script type="text/javascript"> var digAdData; var digGetAd = function(){};</script>
+<script type="text/javascript" src="http://espn.csar.go.com/DynamicCSAd?srvc=sz&amp;itype=Banner&amp;itype=ImpactLogo&amp;itype=SponsoredByLogoHeader&amp;itype=PresentedByLogo&amp;itype=RevenueScience"></script>
+<script type="text/javascript" src="http://adimages.go.com/ad/sponsors/utilities/digcsserver.js"></script>
+
+<table class="maincontainertbl" cellpadding="0" cellspacing="0"><tr><td class="maincontainertblcell" valign="top" id="maincontainertblcell">			
+			
+<!-- ////////// start: Transitional Header ////////// -->
+
+<div class="head">
+
+<div class="transitional-elements">
+<!--[if IE 6]><div class="ie ie6"><![endif]-->
+<!--[if IE 7]><div class="ie ie7"><![endif]-->
+<!--[if IE 8]><div class="ie ie8"><![endif]-->
+<div id="transitional-headerBG"></div>
+<!-- transitional header background -->
+<div id="header" class="container">
+
+<div class="espn-logo">
+<h1>
+<a href="http://espn.go.com"><span>ESPN</span></a>
+<a id="section-title" class="{wmode:'transparent',src: 'http://assets.espn.go.com/prod/swf/globalHeader_redesign.swf',height: '45', adTag: ''}" href="http://games.espn.go.com/ffl/frontpage"><span>&nbsp;</span></a>
+</h1>
+</div>
+<div class="nav-empire">
+<div class="nav-empire-inner">
+<ul>
+
+<!--[if IE 6]><li class="left endcap">&nbsp;</li><![endif]-->
+
+<li class="first"><a href="http://sports.espn.go.com/espntv/espnGuide" name="&amp;lpos=medianav&amp;lid=tv">TV</a></li>
+<li><a href="http://espnradio.espn.go.com/espnradio/index" name="&amp;lpos=medianav&amp;lid=radio">RADIO</a></li>
+<li><a href="http://www.espnthemag.com" name="&amp;lpos=medianav&amp;lid=magazine">MAGAZINE</a></li>
+<li><a href="http://insider.espn.go.com/insider/index" name="&amp;lpos=medianav&amp;lid=insider">INSIDER</a></li>
+<li><a href="http://espnradio.espn.go.com/espnradio/podcast/index" name="&amp;lpos=medianav&amp;lid=podcenter">PODCENTER</a></li>
+<li class="last"><a href="http://www.espn360.com" name="&amp;lpos=medianav&amp;lid=360">ESPN360</a></li>
+
+<!--[if IE 6]><li class="right endcap">&nbsp;</li><![endif]-->
+</ul>
+</div>
+</div>
+
+<div class="personalization">
+<!-- begin uni login -->
+<script type="text/javascript">
+var returnURL = document.location.href;
+var anCV = "";
+var baristaService = '/ffl';
+</script>
+
+<script type="text/javascript">
+    if (returnURL.indexOf("univLogin02", 0) == -1) {
+        if (returnURL.indexOf("?",0) == -1) {
+            returnURL = returnURL + "?univLogin02=stateChanged";
+        } else {
+            returnURL = returnURL + "&univLogin02=stateChanged";
+        }
+    }
+</script>
+<ul>
+<span id="imgRef" style="display:none">http://a.espncdn.com/prod</span>
+<span id="urlPrefix" style="display:none">https://r.espn.go.com</span>
+<span id="isProd" style="display:none">true</span>
+<span id="loginStatus" style="display:none">1</span>
+<span id="hasInsider" style="display:none">true</span>
+<span id="username" style="display:none" name="username">sean23007</span>
+<form id="form-memberarea">
+<input type="hidden" name="language" value="en"/>
+<input type="hidden" name="affiliateName" value="espn_fantgames"/>
+<input type="hidden" name="regFormId" id="regFormId" value="espn_ffl08"/>
+</form>
+<li id="welcome">
+<span>Welcome, <a class="membername" name="&amp;lpos=membersvcsnav&amp;lid=profile" href="http://sportsnation.espn.go.com/fans/sean23007">Sean</a></span></li>
+<li id="myespn" class="user-active">
+<a href="#myespn"><span>myESPN</span></a>
+<div class="content"><!-- PLACEHOLDER FOR CONTENT --></div>
+</li>
+</ul>
+<form style="display:none"><input type="text" id="hiddenUsername" name="username"/><input type="password" id="hiddenPassword" name="password"/></form>
+
+<script type="text/javascript">
+var anCV = "TM161";
+</script> 
+
+</div>
+
+
+</div>
+<div id="nav-gradientBG"></div><!-- nav gradient BG added for transitional -->
+<!-- start: nav -->
+<div id="nav-wrapper" class="container">
+<div id="nav-wrapper-container">
+<div id="nav-main">
+
+<ul class="top">
+	
+<li class="t-allsports"><a href="http://espn.go.com/sports/" name="&amp;lpos=sitenav&amp;lid=sitenav_sports">ALL SPORTS</a>
+<div>
+<ul>
+<li><a href="http://sports.espn.go.com/nfl/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_nfl">NFL</a></li>	
+<li><a href="http://espn.go.com/mlb/" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_mlb">MLB</a></li>	
+<li><a href="http://espn.go.com/nba/" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_nba">NBA</a></li>	
+<li><a href="http://espn.go.com/nhl/" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_nhl">NHL</a></li>
+<li><a href="http://sports.espn.go.com/ncf/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_ncf">College Football</a></li>	
+<li><a href="http://espn.go.com/mens-college-basketball/" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_ncb">College Basketball</a></li>
+<li><a href="http://sports.espn.go.com/sports/womenbb/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_womenbb">Women's Basketball</a></li>
+<li><a href="http://sports.espn.go.com/ncaa/espnu/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_ncaa">College Sports</a></li>
+
+<li><a href="http://sports.espn.go.com/golf/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_golf">Golf</a></li>
+</ul>
+<ul>
+<li><a href="http://sports.espn.go.com/rpm/nascar/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_nascar">NASCAR</a></li>
+<li><a href="http://sports.espn.go.com/rpm/racing/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_autos">Racing</a></li>
+
+<li><a href="http://soccernet.espn.go.com/index?cc=5901" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_soccer">Soccer</a></li>
+<li><a href="http://sports.espn.go.com/highschool/rise/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_highschools">High Schools</a></li>
+<li><a href="http://sports.espn.go.com/sports/tennis/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_tennis">Tennis</a></li>
+<li><a href="http://sports.espn.go.com/sports/boxing/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_boxing">Boxing</a></li>
+<li><a href="http://sports.espn.go.com/extra/mma/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_mma">Mixed Martial Arts</a></li>
+<li><a href="http://sports.espn.go.com/oly/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_olympics">Olympic Sports</a></li>
+<li><a href="http://sports.espn.go.com/sports/horse/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_horse">Horse Racing</a></li>		
+</ul>	
+<ul class="last">
+<li><a href="http://sports.espn.go.com/espn/poker/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_poker">Poker</a></li>
+<li><a href="http://sports.espn.go.com/extra/lacrosse/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_lacrosse">Lacrosse</a></li>
+<li><a href="http://sports.espn.go.com/sports/womenbb/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_wnba">WNBA</a></li>
+<li><a rel="nofollow" target="_blank" class="external" href="http://www.cricinfo.com/espn/content/site/espn/index.html" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_cricket">Cricket (Cricinfo)</a></li>	
+<li><a rel="nofollow" target="_blank" class="external" href="http://x.go.com/cgi/x.pl?goto=http://www.scrum.com/&amp;name=SCRUM&amp;srvc=sz" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_rugby">Rugby (Scrum)</a></li>
+<li><a href="http://espn.go.com/action/" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_actionsports">Action Sports</a></li>
+<li><a href="http://sports.espn.go.com/outdoors/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_outdoors">Outdoors</a></li>
+<li><a href="http://sports.espn.go.com/outdoors/bassmaster/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_bassmaster">Bassmaster</a></li>
+<li><a href="http://sports.espn.go.com/rodeo/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sports_rodeo">Rodeo & Bull Riding</a></li>
+</ul>
+</div>		
+</li>
+
+<li class="t-columnists"><a href="http://espn.go.com/espn/columnists/" name="&amp;lpos=sitenav&amp;lid=sitenav_columnists">COLUMNISTS</a>
+<div>
+<ul class="last">
+<li><a href="http://sports.espn.go.com/espn/blog/main" name="&amp;lpos=sitenav&amp;lid=sitenav_columnists_blogs">Blogs</a></li>
+<!--<li><a href="http://espnradio.espn.go.com/espnradio/podcast/index" name="&amp;lpos=sitenav&amp;lid=sitenav_columnists_podcasts">PodCenter</a></li>-->
+<li><a href="http://insider.espn.go.com/insider/local/index" name="&amp;lpos=sitenav&amp;lid=sitenav_columnists_espnlocal">ESPN Local</a></li>
+<li><a href="http://sports.espn.go.com/espn/otl/index" name="&amp;lpos=sitenav&amp;lid=sitenav_columnists_otl">Outside the Lines</a></li>
+<li><a href="http://espn.go.com/espn/columnists/archive/_/name/leanne-schreiber" name="&amp;lpos=sitenav&amp;lid=sitenav_columnists_ombudsman">Ombudsman</a></li>
+</ul>
+</div>		
+</li>
+
+<li class="t-page2"><a href="http://sports.espn.go.com/espn/page2/index" name="&amp;lpos=sitenav&amp;lid=sitenav_page2">PAGE 2</a>
+<div>
+<ul class="last">
+<li><a href="http://sports.espn.go.com/espn/page2/simmons/index" name="&amp;lpos=sitenav&amp;lid=sitenav_page2_simmons">Sports Guy's World</a></li>
+<li><a href="http://www.espnthemag.com" name="&amp;lpos=sitenav&amp;lid=sitenav_page2_magazine">ESPN The Magazine</a></li>
+</ul>
+</div>		
+</li>
+
+<li class="t-fantasy active"><a href="http://games.espn.go.com/frontpage" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy">FANTASY &amp; GAMES</a>
+<div>
+<ul>
+<li><a href="http://games.espn.go.com/frontpage/football" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_football">Football</a></li>
+<li><a href="http://games.espn.go.com/frontpage/baseball" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_baseball">Baseball</a></li>
+<li><a href="http://games.espn.go.com/frontpage/basketball" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_basketball">Basketball</a></li>
+<li><a href="http://games.espn.go.com/frontpage/hockey" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_hockey">Hockey</a></li>
+<li><a href="http://games.espn.go.com/frontpage/racing" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_auto">Stock Car</a></li>
+<li><a href="http://games.espn.go.com/frontpage/soccer" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_soccer">Soccer</a></li>
+<li><a href="http://arcade.espn.go.com" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_arcade">Arcade</a></li>
+<li><a href="http://sports.espn.go.com/videogames/index" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_videogames">Video Games</a></li>
+</ul>
+<ul class="last">
+<li><a href="http://games.espn.go.com/nflpc/frontpage" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_gridiron_playoff">Gridiron Playoff Challenge</a></li>
+<li><a href="http://streak.espn.go.com" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_streak">Streak for the CASH</a></li>
+<li><a href="http://games.espn.go.com/bowlmania/frontpage" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_college">College Bowl Mania</a></li>	
+<li><a href="http://games.espn.go.com/pigskin/frontpage" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_pigskin">Pigskin Pick'em</a></li>
+<li><a href="http://games.espn.go.com/gridiron/frontpage" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_gridiron">Gridiron Challenge</a></li>
+<li><a href="http://games.espn.go.com/eliminator/frontpage" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_eliminator">Eliminator Challenge</a></li>	
+<li><a href="http://games.espn.go.com/uber/front" name="&amp;lpos=sitenav&amp;lid=sitenav_fantasy_uber">Uber Challenge</a></li>
+</ul>
+</div>		
+</li>
+
+<li class="t-video"><a href="http://espn.go.com/video/" name="&amp;lpos=sitenav&amp;lid=sitenav_video">VIDEO</a>
+<div>
+<ul class="last">
+<li><a href="http://espn.go.com/video/category?id=2378529" name="&amp;lpos=sitenav&amp;lid=sitenav_video_mostrecent">Most Recent</a></li>
+<li><a href="http://search.espn.go.com/highlights/video/6" name="&amp;lpos=sitenav&amp;lid=sitenav_video_highlights">Highlights</a></li>
+<li><a href="http://insider.espn.go.com/broadband/video/videopage?categoryId=2957357" name="&amp;lpos=sitenav&amp;lid=sitenav_video_pti">Pardon the Interruption</a></li>
+<li><a href="http://sports.espn.go.com/espn/sportscenter/index" name="&amp;lpos=sitenav&amp;lid=sitenav_video_sportscenter">SportsCenter</a></li>
+<li><a href="http://espn.go.com/video/category?id=3606163" name="&amp;lpos=sitenav&amp;lid=sitenav_video_countdowndaily">Countdown Daily</a></li>
+<li><a href="http://espn.go.com/video/category?id=3670864" name="&amp;lpos=sitenav&amp;lid=sitenav_video_maynestreet">Mayne Street</a></li>
+<li><a href="http://espn.go.com/video/clip?categoryid=3461971" name="&amp;lpos=sitenav&amp;lid=sitenav_video_mmalive">MMA Live</a></li>
+<li><a href="http://www.espn360.com" name="&amp;lpos=sitenav&amp;lid=sitenav_video_360">ESPN360</a></li>
+</ul>
+</div>	
+</li>
+
+<li class="t-sportsnation"><a href="http://sports.espn.go.com/chat/sportsnation/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sportsnation">SPORTSNATION</a>
+<div>
+<ul class="last">
+<li><a href="http://sportsnation.espn.go.com/" name="&amp;lpos=sitenav&amp;lid=sitenav_sportsnation_profiles">Profiles</a></li>
+<li><a href="http://sportsnation.espn.go.com/groups" name="&amp;lpos=sitenav&amp;lid=sitenav_sportsnation_groups">Groups</a></li>
+<li><a href="http://myespn.go.com/s/conversations/list" name="&amp;lpos=sitenav&amp;lid=sitenav_sportsnation_conversations">Conversations</a></li>
+<li><a href="http://sports.espn.go.com/chat/sportsnation/story?page=ChatArchiveIndexHome" name="&amp;lpos=sitenav&amp;lid=sitenav_sportsnation_chats">Chats</a></li>
+<li><a href="http://sports.espn.go.com/chat/sportsnation/poll/index" name="&amp;lpos=sitenav&amp;lid=sitenav_sportsnation_polls">Polls</a></li>
+<li><a href="http://boards.espn.go.com/boards/mb/mb?sport=espn&id=index" name="&amp;lpos=sitenav&amp;lid=sitenav_sportsnation_messageboards">Message Boards</a></li>
+<li><a href="http://widgetcenter.espn.go.com" name="&amp;lpos=sitenav&amp;lid=sitenav_sportsnation_widgets">Widgets</a></li>
+</ul>
+</div>		
+</li>
+
+<li class="t-thelife last"><a href="http://espn.go.com/espn/thelife/" name="&amp;lpos=sitenav&amp;lid=sitenav_thelife">THE LIFE</a>
+<div>
+<ul class="last">
+<li><a target="_blank" class="external" href="http://www.stubhub.com" name="&amp;lpos=sitenav&amp;lid=sitenav_thelife_tickets" onclick="this.href=this.href+'?gcid=C12289x522&gtkw=ESPN+Tickets'">Tickets</a></li>
+<li><a href="http://sports.espn.go.com/travel/index" name="&amp;lpos=sitenav&amp;lid=sitenav_thelife_travel">Travel</a></li>
+<li><a href="http://travel.espn.go.com/travel/passport/index" name="&amp;lpos=sitenav&amp;lid=sitenav_thelife_passport">Sports Passport</a></li>
+<li><a href="http://www.myride.com/index.html?id=30164" name="&amp;lpos=sitenav&amp;lid=sitenav_thelife_cars">Cars</a></li>
+<li><a href="http://sports.espn.go.com/espn/contests/index" name="&amp;lpos=sitenav&amp;lid=sitenav_thelife_contests">Contests</a></li>
+<li><a href="http://www.espnshop.com/SID--9062/cm_mmc--Affiliates-_-ESPN-_-headerlink-_-homepageheader/" name="&amp;lpos=sitenav&amp;lid=sitenav_thelife_shop">Shop</a></li>
+<li><a href="http://www.espnbooks.com" name="&amp;lpos=sitenav&amp;lid=sitenav_thelife_books">Books</a></li>
+<li><a rel="nofollow" target="_blank" class="external" href="http://www.active.com/espn/getactive/" name="&amp;lpos=sitenav&amp;lid=sitenav_thelife_active">Active.com</a></li>
+</ul>
+</div>		
+</li>
+
+</ul>
+
+
+<!-- begin search -->
+<div id="nav-main-search">
+<form id="searchBox" name="searchBox" action="http://search.espn.go.com/results" method="get" accept-charset="utf-8">
+<div>
+<input autocomplete="off" class="text" type="text" name="searchString" id="searchString" />
+<input type="hidden" name="page" id="page" value="null" />
+<input type="hidden" name="fromForm" value="true" />
+<input class="submit" type="image" src="http://assets.espn.go.com/beta/assets/main_search.gif" name="submit" id="submit" value="Search" />
+</div>
+</form>
+</div>
+<!-- end search -->
+
+</div>
+
+<div class="nav-main-secondary"><ul><!-- DO NOT USE STANDARD LM CE REPLACEMENTS, BECAUSE FRONTPAGE SHARES -->
+<li class="subnav-frontpage"><a href="/frontpage/football">Fantasy Football</a></li>
+<li class="subnav-leaders"><a href="/ffl/leaders?leagueId=97031">Scoring Leaders</a></li>
+<li class="subnav-tools-projections"><a href="/ffl/tools/projections?leagueId=97031">Projections</a></li>
+<li class="subnav-rules"><a href="/ffl/content?page=fflrulesindex2008">Rules</a></li>
+<li class="subnav-addeddropped"><a href="/ffl/addeddropped">Added/Dropped</a></li>
+<li class="subnav-tools-undroppables"><a href="/ffl/tools/undroppables">Undroppables</a></li>
+<li class="subnav-resources-playernews"><a href="/ffl/resources/playernews">Player News</a></li>
+<li class="subnav-resources-playernews-injuries"><a href="/ffl/resources/playernews?injuryMode=true">Injuries</a></li>
+<li class="subnav-pointsagainst"><a href="/ffl/pointsagainst">Points Against</a></li>
+<li class="subnav-resources-leaderboard"><a href="/ffl/resources/leaderboard">Leaderboard</a></li>
+</ul></div>
+
+<div class="nav-main-breadcrumbs">
+<a href="http://espn.go.com">ESPN</a> &raquo; <a href="http://games.espn.go.com/frontpage">Fantasy &amp; Games</a> &raquo; <a href="http://games.espn.go.com/ffl/frontpage">Fantasy Football</a>
+
+ &raquo; Dueces at REPEAT Box Score: Week 10
+
+</div>
+</div>
+</div>
+</div><!-- end transitional elements wrapper -->
+<!-- end: nav -->
+<!--[if lte IE 8]></div><![endif]-->
+</div>
+<!-- ////////// end: Transitional Header ////////// --><div class="contentcontainer">
+<div class="fantasynavbg"><div id="bannercontainer"><script type="text/javascript">digGetAd("Banner");</script></div><div class="fantasynav"><div class="playerSearchDiv"><form class="playerSearchForm" name="playerSearch" id="playerSearch" action="/ffl/freeagency" onsubmit="return playerSuggester.submitSelectedPlayer();" method="GET"><div><input type="hidden" name="leagueId" value="97031"><input type="hidden" name="teamId" value="8"><input type="hidden" name="avail" value="-1"><input type="hidden" name="slotCategoryGroup" value="-1">Find a Player: <input class="playerSearchNameInput" type="text" id="playerName" name="search" onkeyup="playerSuggester.handleKeyUp(event, this.value);" value="Last Name" style="color:#999;" onfocus="playerSuggester.focus();" onblur="playerSuggester.blur();"></div></form><div style="margin: 0px;"><div id="playerSuggestions" style="display: none;" onmouseover="playerSuggester.suggestDivOver();" onmouseout="playerSuggester.suggestDivOut();"></div></div></div><script type="text/javascript">var playerSuggester = new PlayerSuggester('playerSuggester');</script><div class="hdrleaguetitletxt"><strong>Z's League</strong> | Doomsday Church of Oblivion</div><div class="fantasynavtabs"><div class="fantasynavtab leaguetab"><a href="/ffl/leagueoffice?leagueId=97031"></a></div><div class="fantasynavtab myteamtab"><a href="/ffl/clubhouse?leagueId=97031&teamId=8"></a></div><div class="fantasynavtab playerstab"><a href="/ffl/freeagency?leagueId=97031&teamId=8"></a></div><div class="fantasynavtab standingstab"><a href="/ffl/standings?leagueId=97031"></a></div><div class="fantasynavtab scoreboardtab"><a href="/ffl/scoreboard?leagueId=97031"></a></div><div class="fantasynavtab teamstab"><a href="#" onmouseover="$('teamsddmenu').show();" onmouseout="$('teamsddmenu').hide();"></a><div id="teamsddmenu" class="navddmenu" style="display:none;" onmouseover="$('teamsddmenu').show();" onmouseout="$('teamsddmenu').hide();"><div class="navddmenuitem teamsddmenuitem navddmenuitemfirst hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=2&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Team Hartz</div><div class="teamsddmenuitemabbrev">HART</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=6&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Victorious Secret</div><div class="teamsddmenuitemabbrev">VS</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=11&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Team Speltz</div><div class="teamsddmenuitemabbrev">SPEL</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=5&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">St. Cloud Dueces</div><div class="teamsddmenuitemabbrev">SCD</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=10&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Team Short</div><div class="teamsddmenuitemabbrev">SHOR</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=9&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Team REPEAT</div><div class="teamsddmenuitemabbrev">NORD</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=3&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Team gellin</div><div class="teamsddmenuitemabbrev">GEL</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=12&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Blumpkin Deckers</div><div class="teamsddmenuitemabbrev">BLUM</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=8&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Doomsday Church of...</div><div class="teamsddmenuitemabbrev">SRS</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=1&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Gridiron Gamblers</div><div class="teamsddmenuitemabbrev">GG</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=7&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Team Heintz</div><div class="teamsddmenuitemabbrev">HEIN</div></div><div class="navddmenuitem teamsddmenuitem hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=4&amp;seasonId=2008');"><div class="teamsddmenuitemteamname">Team neumann</div><div class="teamsddmenuitemabbrev">NEUM</div></div></div></div><div class="fantasynavtab fantasycasttab"><a href="javascript:launchFantasyCast(97031,8);"></a></div></div><div class="fantasynavteaminfo"><div><div class="hdrteamstxt" style="width:100%;text-align:right;" onmouseover="$('myfantteamsddmenu').show();" onmouseout="$('myfantteamsddmenu').hide();"><a href="#">My Fantasy Teams +</a></div></div><div id="myfantteamsddmenu" class="navddmenu" style="display:none;" onmouseover="$('myfantteamsddmenu').show();" onmouseout="$('myfantteamsddmenu').hide();"><div class="navddmenuitem myfantteamsddmenuitem navddmenuitemfirst hand" onmouseover="$(this).addClassName('navddmenuitemhighlight');" onmouseout="$(this).removeClassName('navddmenuitemhighlight');" onclick="gotosite('/ffl/clubhouse?leagueId=97031&amp;teamId=8&amp;seasonId=2008');"><div><div class="myfantteamsddmenuitemteamname">Doomsday Church of Oblivion</div><div class="myfantteamsddmenuitemstandings">&nbsp;</div></div><br /><div><div class="myfantteamsddmenuitemleaguename">Z's League</div><div class="myfantteamsddmenuitemrecord">&nbsp;</div></div></div></div></div></div>
+</div>
+<div class="whiteparentcontainer">
+<div class="whitecontainer">
+<div class="subnavtxtempty"></div><div style="width:956px;"><div class="pageHeadlineContainer"><div class="pageHeadline">Dueces at REPEAT Box Score: Week 10</div></div><br /><div style="width: 946px; height:40px; padding:5px;"><span class="bodyCopy">
+<div style="float:left;text-align:left;margin:3px 0 10px 0;vertical-align:baseline;"><a href="http://games.espn.go.com/frontpage/mobileSignup" target="_new"><img src="http://games-ak.espn.go.com/s/ffllm/08//images/fantasy_scoring_alerts.gif" width="160" height="19" border="0" style="margin-bottom:6px;"></a>&nbsp;&nbsp;<a href="javascript:launchWindow('http://espn.go.com/espn/ffl/#smack', 'smackcard', 1024, 768);"><img src="http://games-ak.espn.go.com/s/ffllm/08/images/smackcards/SC_154x19.jpg" width="154" height="19" border="0"style="margin-bottom:6px;" /></a><br /><a href="http://scores.espn.go.com/nfl/scoreboard" target="_blank">NFL Scoreboard</a> | <a href="/ffl/leaders?leagueId=97031&scoringPeriodId=10">Scoring Leaders</a></div><div style="float:right;text-align:right;padding-right:4px;"><form style="margin-bottom:10px;"><b>Box Scores:</b> <select id="selectmatchuptoview" onchange="gotosite('http://games.espn.go.com/ffl/boxscorequick?' + this.value)" class="sidebar"><option value="leagueId=97031&teamId=1&scoringPeriodId=10&seasonId=2008&mode=h2h&view=scoringperiod&version=quick" >Gamblers @ Speltz</option><option value="leagueId=97031&teamId=4&scoringPeriodId=10&seasonId=2008&mode=h2h&view=scoringperiod&version=quick" >neumann @ Deckers</option><option value="leagueId=97031&teamId=7&scoringPeriodId=10&seasonId=2008&mode=h2h&view=scoringperiod&version=quick" >Heintz @ Short</option><option value="leagueId=97031&teamId=5&scoringPeriodId=10&seasonId=2008&mode=h2h&view=scoringperiod&version=quick"  selected="selected" selected="selected">Dueces @ REPEAT</option><option value="leagueId=97031&teamId=3&scoringPeriodId=10&seasonId=2008&mode=h2h&view=scoringperiod&version=quick" >gellin @ of Obli...</option><option value="leagueId=97031&teamId=2&scoringPeriodId=10&seasonId=2008&mode=h2h&view=scoringperiod&version=quick" >Hartz @ Secret</option></select></form><b>Quick Box Score</b> | <a href="/ffl/boxscorefull?leagueId=97031&teamId=5&scoringPeriodId=10&seasonId=2008&mode=h2h&view=scoringperiod&version=full">Full Box Score</a> | <a href="/ffl/boxscorescoring?leagueId=97031&teamId=5&scoringPeriodId=10&seasonId=2008&mode=h2h&view=scoringperiod&version=scoring">Scoring Breakdown</a></div></span></div>
+<div id="teamInfos" style="float:left; clear:both; width:956px; margin-bottom:10px;"><div style="float:left;"><div class="colorNote" style="float:left; width:460px; padding:0px; border:1px solid #dddddd;"><div style="float:left; border-right:1px solid #dddddd; line-height:0px;"><script type="text/javascript">
+var LOGO=new flashObj();
+LOGO.flashFile = "http://games-ak.espn.go.com/s/ffllm/08/swf/logoDisplay.swf?leagueId=97031&teamId=5";
+LOGO.flashVars = "&logoType=assembled&logoUrl=&logoLetter=D&fontFace=hindlewood&fontColor=ff0000&backStyle=solid&backColor=000000&url1=%2Fffl%2Fclubhouse%3FleagueId%3D97031%26teamId%3D5";
+LOGO.width = "151";
+LOGO.height = "129.0";
+LOGO.ID = "flashLogo5";
+LOGO.DenyIEdl = "TRUE";
+LOGO.altTxt = "Logo Builder";
+LOGO.render(true);
+</script>
+</div><div style="text-align:left; padding:5px; float:left; width:285px; line-height:18px;"><span class="bodyCopy">
+<div style="font-size:18px; margin-bottom:14px; font-family:Helvetica,sans-serif;"><b>St. Cloud Dueces</b></div>
+	
+	<style>
+	.teamInfoOwnerCallouts { width: 290px; height: 48px; display: block; margin-top: -2px; margin-bottom: 3px; } 
+	.teamInfoOwnerMug { width: 35px; height: 48px; display:inline; float: left; padding: 0; }
+	.teamInfoOwnerData { width: 104px; padding: 3px; overflow: hidden; height: 42px; display: inline; float: left; }
+	</style>
+	
+	<div class="teamInfoOwnerCallouts"><div class="teamInfoOwnerMug"><a href="http://sportsnation.espn.go.com/fans/AlbinoLlama72" target="_new"><img src="http://avatars.espn.go.com/avatars/albinollama72/48/albinollama72.jpg" border="0" width="35" height="48" onerror="this.src='http://assets.espn.go.com/i/profile/default/silo2_guy_35.jpg'" /></a></div><div class="teamInfoOwnerData"><a href="http://sportsnation.espn.go.com/fans/AlbinoLlama72" target=_new>Matthew Rydberg</a></div></div><b>Record:</b> 4-8-1&nbsp;&nbsp;&nbsp;&nbsp;<b>Streak:</b> L3<br /><b>Standing:</b> 11th (7.5 GB)<br /></span></div>
+</div></div><div style="float:right;"><div class="colorNote" style="float:left; width:460px; padding:0px; border:1px solid #dddddd;"><div style="float:left; border-right:1px solid #dddddd; line-height:0px;"><script type="text/javascript">
+var LOGO=new flashObj();
+LOGO.flashFile = "http://games-ak.espn.go.com/s/ffllm/08/swf/logoDisplay.swf?leagueId=97031&teamId=9";
+LOGO.flashVars = "&logoType=assembled&logoUrl=&logoLetter=D&fontFace=hindlewood&fontColor=0000cc&backStyle=solid&backColor=000000&url1=%2Fffl%2Fclubhouse%3FleagueId%3D97031%26teamId%3D9";
+LOGO.width = "151";
+LOGO.height = "129";
+LOGO.ID = "flashLogo9";
+LOGO.DenyIEdl = "TRUE";
+LOGO.altTxt = "Logo Builder";
+LOGO.render(true);
+</script>
+</div><div style="text-align:left; padding:5px; float:left; width:285px; line-height:18px;"><span class="bodyCopy">
+<div style="font-size:18px; margin-bottom:14px; font-family:Helvetica,sans-serif;"><b>Team REPEAT</b></div>
+	
+	<style>
+	.teamInfoOwnerCallouts { width: 290px; height: 48px; display: block; margin-top: -2px; margin-bottom: 3px; } 
+	.teamInfoOwnerMug { width: 35px; height: 48px; display:inline; float: left; padding: 0; }
+	.teamInfoOwnerData { width: 104px; padding: 3px; overflow: hidden; height: 42px; display: inline; float: left; }
+	</style>
+	
+	<div class="teamInfoOwnerCallouts"><div class="teamInfoOwnerMug"><a href="http://sportsnation.espn.go.com/fans/dmnordlund" target="_new"><img src="http://avatars.espn.go.com/avatars/dmnordlund/48/dmnordlund.jpg" border="0" width="35" height="48" onerror="this.src='http://assets.espn.go.com/i/profile/default/silo2_guy_35.jpg'" /></a></div><div class="teamInfoOwnerData"><a href="http://sportsnation.espn.go.com/fans/dmnordlund" target=_new>daniel nordlund</a></div></div><b>Record:</b> 6-7-0&nbsp;&nbsp;&nbsp;&nbsp;<b>Streak:</b> W1<br /><b>Standing:</b> T-5th (6 GB)<br /></span></div>
+</div></div></div><div style="clear:both;"></div><table border=0 width=100% cellpadding=0 cellspacing=0><tr valign=top><td width=49%>
+<div id="playerTableAllPositionsPopup" style="display:none;"></div><table border="0" cellspacing="1" cellpadding="0" width="100%" class="tableBody">
+<tr bgcolor="#1d7225">
+<td width="100%" align="center" colspan="100" class="tableHead">ST. CLOUD DUECES</td>
+</tr>
+</table>
+<table border="0" cellspacing="1" id="playerTableTable_0" cellpadding="0" width="100%" class="playerTableTable tableBody">
+<tr style=""  class="playerTableBgRowSubhead tableSubHead "><td width="13%">SLOT</td><td><NOBR>STARTERS</NOBR></td><td title="Opponent" width=9%>OPP</td><td title="Game Status" width=18%><nobr>STATUS ET</nobr></td><td title="Total Points" align="right" width=12%>PTS</td></tr>
+<tr style=""  id="plyr2149" class="playerTableBgRow0  "><td id="slot_2149" class="slot_0 playerSlot" style="font-weight: bold;">QB</td><td id="playername_2149" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="2149" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Chad Pennington</div>, Mia QB</NOBR></td><td id="opponent_2149"><div id="opponent_2149_281109015"><a href="http://sports.espn.go.com/nfl/clubhouse?team=sea" target=_new>Sea</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109015_15_2149"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109015" target="_new">21-19 F</a></td><td id="plscrg_2149_totpts" align="right" style="font-weight:bold;">12</td></tr>
+<tr style=""  id="plyr4481" class="playerTableBgRow1  "><td id="slot_4481" class="slot_2 playerSlot" style="font-weight: bold;">RB</td><td id="playername_4481" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="4481" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Willis McGahee</div>, Bal RB</NOBR></td><td id="opponent_4481"><div id="opponent_4481_281109034"><a href="http://sports.espn.go.com/nfl/clubhouse?team=hou" target=_new>@Hou</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109034_33_4481"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109034" target="_new">41-13 F</a></td><td id="plscrg_4481_totpts" align="right" style="font-weight:bold;">23</td></tr>
+<tr style=""  id="plyr11258" class="playerTableBgRow0  "><td id="slot_11258" class="slot_2 playerSlot" style="font-weight: bold;">RB</td><td id="playername_11258" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="11258" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Chris Johnson</div>, Ten RB&nbsp;&nbsp;<span title="Probable" style="font-weight:bold;cursor:default;" class="error">P</span><img src="http://games-ak.espn.go.com/s/ffllm/08/images/icons/sml/brkgnews.png" height="12" width="14" border="0" style="margin:0 6px 0 6px" class="popplayercard hand" player_id="11258" league_id="97031" team_id="8" tab_id="1"  title="Breaking News" /></NOBR></td><td id="opponent_11258"><div id="opponent_11258_281109003"><a href="http://sports.espn.go.com/nfl/clubhouse?team=chi" target=_new>@Chi</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109003_10_11258"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109003" target="_new">21-14 F</a></td><td id="plscrg_11258_totpts" align="right" style="font-weight:bold;">1</td></tr>
+<tr style=""  id="plyr4601" class="playerTableBgRow1  "><td id="slot_4601" class="slot_3 playerSlot" style="font-weight: bold;">RB/WR</td><td id="playername_4601" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="4601" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Justin Gage</div>, Ten WR<img src="http://games-ak.espn.go.com/s/ffllm/08/images/icons/sml/brkgnews.png" height="12" width="14" border="0" style="margin:0 6px 0 6px" class="popplayercard hand" player_id="4601" league_id="97031" team_id="8" tab_id="1"  title="Breaking News" /></NOBR></td><td id="opponent_4601"><div id="opponent_4601_281109003"><a href="http://sports.espn.go.com/nfl/clubhouse?team=chi" target=_new>@Chi</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109003_10_4601"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109003" target="_new">21-14 F</a></td><td id="plscrg_4601_totpts" align="right" style="font-weight:bold;">10</td></tr>
+<tr style=""  id="plyr5633" class="playerTableBgRow0  "><td id="slot_5633" class="slot_4 playerSlot" style="font-weight: bold;">WR</td><td id="playername_5633" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="5633" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Jerricho Cotchery</div>, NYJ WR</NOBR></td><td id="opponent_5633"><div id="opponent_5633_281109020"><a href="http://sports.espn.go.com/nfl/clubhouse?team=stl" target=_new>StL</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109020_20_5633"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109020" target="_new">47-3 F</a></td><td id="plscrg_5633_totpts" align="right" style="font-weight:bold;">1</td></tr>
+<tr style=""  id="plyr11283" class="playerTableBgRow1  "><td id="slot_11283" class="slot_4 playerSlot" style="font-weight: bold;">WR</td><td id="playername_11283" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="11283" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >DeSean Jackson</div>, Phi WR</NOBR></td><td id="opponent_11283"><div id="opponent_11283_281109021"><a href="http://sports.espn.go.com/nfl/clubhouse?team=nyg" target=_new>NYG</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109021_21_11283"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109021" target="_new">31-36 F</a></td><td id="plscrg_11283_totpts" align="right" style="font-weight:bold;">14</td></tr>
+<tr style=""  id="plyr4549" class="playerTableBgRow0  "><td id="slot_4549" class="slot_6 playerSlot" style="font-weight: bold;">TE</td><td id="playername_4549" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="4549" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Visanthe Shiancoe</div>, Min TE</NOBR></td><td id="opponent_4549"><div id="opponent_4549_281109016"><a href="http://sports.espn.go.com/nfl/clubhouse?team=gnb" target=_new>GB</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109016_16_4549"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109016" target="_new">28-27 F</a></td><td id="plscrg_4549_totpts" align="right" style="font-weight:bold;">0</td></tr>
+<tr style=""  id="plyr60024" class="playerTableBgRow1  "><td id="slot_60024" class="slot_16 playerSlot" style="font-weight: bold;">D/ST</td><td id="playername_60024" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="60024" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Chargers D/ST</div>, SD D/ST</NOBR></td><td id="opponent_60024"><div id="opponent_60024_281109024"><a href="http://sports.espn.go.com/nfl/clubhouse?team=kan" target=_new>KC</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109024_24_60024"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109024" target="_new">20-19 F</a></td><td id="plscrg_60024_totpts" align="right" style="font-weight:bold;">1</td></tr>
+<tr style=""  id="plyr11122" class="playerTableBgRow0  "><td id="slot_11122" class="slot_17 playerSlot" style="font-weight: bold;">K</td><td id="playername_11122" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="11122" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Matt Prater</div>, Den K</NOBR></td><td id="opponent_11122"><div id="opponent_11122_281106005"><a href="http://sports.espn.go.com/nfl/clubhouse?team=cle" target=_new>@Cle</a></div></td><td style="white-space:nowrap;" id="gamestatus_281106005_7_11122"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281106005" target="_new">34-30 F</a></td><td id="plscrg_11122_totpts" align="right" style="font-weight:bold;">8</td></tr>
+</table>
+<table width="100%" border="0" cellpadding="2" cellspacing="1" class="tableBody" bgcolor="#ffffff" >
+<tr align=right valign=middle><td>TOTAL POINTS: </td><td width=12% id="plscrg_activetotpts_5" bgcolor="#f2f2e8" style="font-weight: bold; font-size: 1.2em;">70</td></tr>
+</table>
+<div style="padding: 3px;"><span class="bodyCopy">
+<div id="benchShowLink0" style="float:right;"><a href="javascript:toggleBench('show', 2);">Show Bench</a></div></span></div>
+<div id="bench0" style="display:none;">
+<br />
+<div id="playerTableAllPositionsPopup" style="display:none;"></div><table border="0" cellspacing="1" cellpadding="0" width="100%" class="tableBody">
+<tr bgcolor="#1d7225">
+<td width="100%" align="center" colspan="100" class="tableHead">ST. CLOUD DUECES BENCH</td>
+</tr>
+</table>
+<table border="0" cellspacing="1" id="playerTableTable_0" cellpadding="0" width="100%" class="playerTableTable tableBody">
+<tr style=""  class="playerTableBgRowSubhead tableSubHead "><td width="13%">SLOT</td><td><NOBR>BENCH</NOBR></td><td title="Opponent" width=9%>OPP</td><td title="Game Status" width=18%><nobr>STATUS ET</nobr></td><td title="Total Points" align="right" width=12%>PTS</td></tr>
+<tr style=""  id="plyr5536" class="playerTableBgRow0  "><td id="slot_5536" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_5536" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="5536" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Ben Roethlisberger</div>, Pit QB&nbsp;&nbsp;<span title="Probable" style="font-weight:bold;cursor:default;" class="error">P</span><img src="http://games-ak.espn.go.com/s/ffllm/08/images/icons/sml/brkgnews.png" height="12" width="14" border="0" style="margin:0 6px 0 6px" class="popplayercard hand" player_id="5536" league_id="97031" team_id="8" tab_id="1"  title="Breaking News" /></NOBR></td><td id="opponent_5536"><div id="opponent_5536_281109023"><a href="http://sports.espn.go.com/nfl/clubhouse?team=ind" target=_new>Ind</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109023_23_5536"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109023" target="_new">20-24 F</a></td><td id="plscrg_5536_totpts" align="right" style="font-weight:bold;">8</td></tr>
+<tr style=""  id="plyr4527" class="playerTableBgRow1  "><td id="slot_4527" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_4527" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="4527" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Jason Witten</div>, Dal TE</NOBR></td><td colspan=2 align=center><NOBR>** BYE **</NOBR></td><td id="plscrg_4527_totpts" align="right" style="">0</td></tr>
+<tr style=""  id="plyr1755" class="playerTableBgRow0  "><td id="slot_1755" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_1755" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="1755" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Edgerrin James</div>, Ari RB<img src="http://games-ak.espn.go.com/s/ffllm/08/images/icons/sml/brkgnews.png" height="12" width="14" border="0" style="margin:0 6px 0 6px" class="popplayercard hand" player_id="1755" league_id="97031" team_id="8" tab_id="1"  title="Breaking News" /></NOBR></td><td id="opponent_1755"><div id="opponent_1755_281110022"><a href="http://sports.espn.go.com/nfl/clubhouse?team=sfo" target=_new>SF</a></div></td><td style="white-space:nowrap;" id="gamestatus_281110022_22_1755"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281110022" target="_new">29-24 F</a></td><td id="plscrg_1755_totpts" align="right" style="font-weight:bold;">0</td></tr>
+<tr style=""  id="plyr60019" class="playerTableBgRow1  "><td id="slot_60019" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_60019" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="60019" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Giants D/ST</div>, NYG D/ST</NOBR></td><td id="opponent_60019"><div id="opponent_60019_281109021"><a href="http://sports.espn.go.com/nfl/clubhouse?team=phi" target=_new>@Phi</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109021_19_60019"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109021" target="_new">36-31 F</a></td><td id="plscrg_60019_totpts" align="right" style="font-weight:bold;">0</td></tr>
+<tr style=""  id="plyr4950" class="playerTableBgRow0  "><td id="slot_4950" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_4950" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="4950" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Earnest Graham</div>*, TB RB&nbsp;&nbsp;<span title="IR" style="font-weight:bold;cursor:default;" class="error">IR</span></NOBR></td><td colspan=2 align=center><NOBR>** BYE **</NOBR></td><td id="plscrg_4950_totpts" align="right" style="">0</td></tr>
+<tr style=""  id="plyr939" class="playerTableBgRow1  "><td id="slot_939" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_939" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="939" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Marvin Harrison</div>, Ind WR<img src="http://games-ak.espn.go.com/s/ffllm/08/images/icons/sml/recentnews.png" height="12" width="14" border="0" style="margin:0 6px 0 6px" class="popplayercard hand" player_id="939" league_id="97031" team_id="8" tab_id="1"  title="Recent News" /></NOBR></td><td id="opponent_939"><div id="opponent_939_281109023"><a href="http://sports.espn.go.com/nfl/clubhouse?team=pit" target=_new>@Pit</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109023_11_939"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109023" target="_new">24-20 F</a></td><td id="plscrg_939_totpts" align="right" style="font-weight:bold;">3</td></tr>
+<tr style=""  id="plyr5741" class="playerTableBgRow0  "><td id="slot_5741" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_5741" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="5741" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Patrick Crayton</div>, Dal WR&nbsp;&nbsp;<span title="Probable" style="font-weight:bold;cursor:default;" class="error">P</span><img src="http://games-ak.espn.go.com/s/ffllm/08/images/icons/sml/recentnews.png" height="12" width="14" border="0" style="margin:0 6px 0 6px" class="popplayercard hand" player_id="5741" league_id="97031" team_id="8" tab_id="1"  title="Recent News" /></NOBR></td><td colspan=2 align=center><NOBR>** BYE **</NOBR></td><td id="plscrg_5741_totpts" align="right" style="">0</td></tr>
+</table>
+<table width="100%" border="0" cellpadding="2" cellspacing="1" class="tableBody" bgcolor="#ffffff" >
+<tr align=right valign=middle><td>BENCH POINTS: </td><td width=12% id="plscrg_inactivetotpts_5" bgcolor="#f2f2e8">11</td></tr>
+</table>
+<div style="padding: 3px;"><span class="bodyCopy">
+<div id="benchHideLink0" style="float:right;"><a href="javascript:toggleBench('hide', 2);">Hide Bench</a></div></span></div>
+</div>
+</td>
+<td width=2%>&nbsp;</td>
+<td width=49%>
+<div id="playerTableAllPositionsPopup" style="display:none;"></div><table border="0" cellspacing="1" cellpadding="0" width="100%" class="tableBody">
+<tr bgcolor="#1d7225">
+<td width="100%" align="center" colspan="100" class="tableHead">TEAM REPEAT</td>
+</tr>
+</table>
+<table border="0" cellspacing="1" id="playerTableTable_0" cellpadding="0" width="100%" class="playerTableTable tableBody">
+<tr style=""  class="playerTableBgRowSubhead tableSubHead "><td width="13%">SLOT</td><td><NOBR>STARTERS</NOBR></td><td title="Opponent" width=9%>OPP</td><td title="Game Status" width=18%><nobr>STATUS ET</nobr></td><td title="Total Points" align="right" width=12%>PTS</td></tr>
+<tr style=""  id="plyr10536" class="playerTableBgRow0  "><td id="slot_10536" class="slot_0 playerSlot" style="font-weight: bold;">QB</td><td id="playername_10536" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="10536" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Trent Edwards</div>, Buf QB&nbsp;&nbsp;<span title="Probable" style="font-weight:bold;cursor:default;" class="error">P</span><img src="http://games-ak.espn.go.com/s/ffllm/08/images/icons/sml/recentnews.png" height="12" width="14" border="0" style="margin:0 6px 0 6px" class="popplayercard hand" player_id="10536" league_id="97031" team_id="8" tab_id="1"  title="Recent News" /></NOBR></td><td id="opponent_10536"><div id="opponent_10536_281109017"><a href="http://sports.espn.go.com/nfl/clubhouse?team=nwe" target=_new>@NE</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109017_2_10536"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109017" target="_new">10-20 F</a></td><td id="plscrg_10536_totpts" align="right" style="font-weight:bold;">6</td></tr>
+<tr style=""  id="plyr9613" class="playerTableBgRow1  "><td id="slot_9613" class="slot_2 playerSlot" style="font-weight: bold;">RB</td><td id="playername_9613" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="9613" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >DeAngelo Williams</div>, Car RB</NOBR></td><td id="opponent_9613"><div id="opponent_9613_281109013"><a href="http://sports.espn.go.com/nfl/clubhouse?team=oak" target=_new>@Oak</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109013_29_9613"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109013" target="_new">17-6 F</a></td><td id="plscrg_9613_totpts" align="right" style="font-weight:bold;">20</td></tr>
+<tr style=""  id="plyr11323" class="playerTableBgRow0  "><td id="slot_11323" class="slot_2 playerSlot" style="font-weight: bold;">RB</td><td id="playername_11323" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="11323" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Steve Slaton</div>, Hou RB</NOBR></td><td id="opponent_11323"><div id="opponent_11323_281109034"><a href="http://sports.espn.go.com/nfl/clubhouse?team=bal" target=_new>Bal</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109034_34_11323"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109034" target="_new">13-41 F</a></td><td id="plscrg_11323_totpts" align="right" style="font-weight:bold;">1</td></tr>
+<tr style=""  id="plyr5603" class="playerTableBgRow1  "><td id="slot_5603" class="slot_3 playerSlot" style="font-weight: bold;">RB/WR</td><td id="playername_5603" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="5603" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Bernard Berrian</div>, Min WR</NOBR></td><td id="opponent_5603"><div id="opponent_5603_281109016"><a href="http://sports.espn.go.com/nfl/clubhouse?team=gnb" target=_new>GB</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109016_16_5603"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109016" target="_new">28-27 F</a></td><td id="plscrg_5603_totpts" align="right" style="font-weight:bold;">0</td></tr>
+<tr style=""  id="plyr8418" class="playerTableBgRow0  "><td id="slot_8418" class="slot_4 playerSlot" style="font-weight: bold;">WR</td><td id="playername_8418" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="8418" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Braylon Edwards</div>, Cle WR</NOBR></td><td id="opponent_8418"><div id="opponent_8418_281106005"><a href="http://sports.espn.go.com/nfl/clubhouse?team=den" target=_new>Den</a></div></td><td style="white-space:nowrap;" id="gamestatus_281106005_5_8418"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281106005" target="_new">30-34 F</a></td><td id="plscrg_8418_totpts" align="right" style="font-weight:bold;">1</td></tr>
+<tr style=""  id="plyr9705" class="playerTableBgRow1  "><td id="slot_9705" class="slot_4 playerSlot" style="font-weight: bold;">WR</td><td id="playername_9705" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="9705" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Brandon Marshall</div>, Den WR</NOBR></td><td id="opponent_9705"><div id="opponent_9705_281106005"><a href="http://sports.espn.go.com/nfl/clubhouse?team=cle" target=_new>@Cle</a></div></td><td style="white-space:nowrap;" id="gamestatus_281106005_7_9705"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281106005" target="_new">34-30 F</a></td><td id="plscrg_9705_totpts" align="right" style="font-weight:bold;">14</td></tr>
+<tr style=""  id="plyr5362" class="playerTableBgRow0  "><td id="slot_5362" class="slot_6 playerSlot" style="font-weight: bold;">TE</td><td id="playername_5362" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="5362" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Antonio Gates</div>, SD TE&nbsp;&nbsp;<span title="Probable" style="font-weight:bold;cursor:default;" class="error">P</span><img src="http://games-ak.espn.go.com/s/ffllm/08/images/icons/sml/brkgnews.png" height="12" width="14" border="0" style="margin:0 6px 0 6px" class="popplayercard hand" player_id="5362" league_id="97031" team_id="8" tab_id="1"  title="Breaking News" /></NOBR></td><td id="opponent_5362"><div id="opponent_5362_281109024"><a href="http://sports.espn.go.com/nfl/clubhouse?team=kan" target=_new>KC</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109024_24_5362"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109024" target="_new">20-19 F</a></td><td id="plscrg_5362_totpts" align="right" style="font-weight:bold;">12</td></tr>
+<tr style=""  id="plyr60023" class="playerTableBgRow1  "><td id="slot_60023" class="slot_16 playerSlot" style="font-weight: bold;">D/ST</td><td id="playername_60023" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="60023" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Steelers D/ST</div>, Pit D/ST</NOBR></td><td id="opponent_60023"><div id="opponent_60023_281109023"><a href="http://sports.espn.go.com/nfl/clubhouse?team=ind" target=_new>Ind</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109023_23_60023"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109023" target="_new">20-24 F</a></td><td id="plscrg_60023_totpts" align="right" style="font-weight:bold;">1</td></tr>
+<tr style=""  id="plyr9354" class="playerTableBgRow0  "><td id="slot_9354" class="slot_17 playerSlot" style="font-weight: bold;">K</td><td id="playername_9354" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="9354" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Robbie Gould</div>, Chi K</NOBR></td><td id="opponent_9354"><div id="opponent_9354_281109003"><a href="http://sports.espn.go.com/nfl/clubhouse?team=ten" target=_new>Ten</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109003_3_9354"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109003" target="_new">14-21 F</a></td><td id="plscrg_9354_totpts" align="right" style="font-weight:bold;">1</td></tr>
+</table>
+<table width="100%" border="0" cellpadding="2" cellspacing="1" class="tableBody" bgcolor="#ffffff" >
+<tr align=right valign=middle><td>TOTAL POINTS: </td><td width=12% id="plscrg_activetotpts_9" bgcolor="#f2f2e8" style="font-weight: bold; font-size: 1.2em;">56</td></tr>
+</table>
+<div style="padding: 3px;"><span class="bodyCopy">
+<div id="benchShowLink1" style="float:right;"><a href="javascript:toggleBench('show', 2);">Show Bench</a></div></span></div>
+<div id="bench1" style="display:none;">
+<br />
+<div id="playerTableAllPositionsPopup" style="display:none;"></div><table border="0" cellspacing="1" cellpadding="0" width="100%" class="tableBody">
+<tr bgcolor="#1d7225">
+<td width="100%" align="center" colspan="100" class="tableHead">TEAM REPEAT BENCH</td>
+</tr>
+</table>
+<table border="0" cellspacing="1" id="playerTableTable_0" cellpadding="0" width="100%" class="playerTableTable tableBody">
+<tr style=""  class="playerTableBgRowSubhead tableSubHead "><td width="13%">SLOT</td><td><NOBR>BENCH</NOBR></td><td title="Opponent" width=9%>OPP</td><td title="Game Status" width=18%><nobr>STATUS ET</nobr></td><td title="Total Points" align="right" width=12%>PTS</td></tr>
+<tr style=""  id="plyr8523" class="playerTableBgRow0  "><td id="slot_8523" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_8523" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="8523" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Marion Barber</div>, Dal RB</NOBR></td><td colspan=2 align=center><NOBR>** BYE **</NOBR></td><td id="plscrg_8523_totpts" align="right" style="">0</td></tr>
+<tr style=""  id="plyr9588" class="playerTableBgRow1  "><td id="slot_9588" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_9588" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="9588" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Reggie Bush</div>*, NO RB&nbsp;&nbsp;<span title="IR" style="font-weight:bold;cursor:default;" class="error">IR</span><img src="http://games-ak.espn.go.com/s/ffllm/08/images/icons/sml/brkgnews.png" height="12" width="14" border="0" style="margin:0 6px 0 6px" class="popplayercard hand" player_id="9588" league_id="97031" team_id="8" tab_id="1"  title="Breaking News" /></NOBR></td><td id="opponent_9588"><div id="opponent_9588_281109001"><a href="http://sports.espn.go.com/nfl/clubhouse?team=atl" target=_new>@Atl</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109001_18_9588"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109001" target="_new">20-34 F</a></td><td id="plscrg_9588_totpts" align="right" style="font-weight:bold;">0</td></tr>
+<tr style=""  id="plyr982" class="playerTableBgRow0  "><td id="slot_982" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_982" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="982" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Joe Nedney</div>, SF K</NOBR></td><td id="opponent_982"><div id="opponent_982_281110022"><a href="http://sports.espn.go.com/nfl/clubhouse?team=ari" target=_new>@Ari</a></div></td><td style="white-space:nowrap;" id="gamestatus_281110022_25_982"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281110022" target="_new">24-29 F</a></td><td id="plscrg_982_totpts" align="right" style="font-weight:bold;">7</td></tr>
+<tr style=""  id="plyr8420" class="playerTableBgRow1  "><td id="slot_8420" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_8420" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="8420" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Carnell Williams</div>*, TB RB&nbsp;&nbsp;<span title="Out" style="font-weight:bold;cursor:default;" class="error">O</span></NOBR></td><td colspan=2 align=center><NOBR>** BYE **</NOBR></td><td id="plscrg_8420_totpts" align="right" style="">0</td></tr>
+<tr style=""  id="plyr8419" class="playerTableBgRow0  "><td id="slot_8419" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_8419" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="8419" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Cedric Benson</div>, Cin RB</NOBR></td><td colspan=2 align=center><NOBR>** BYE **</NOBR></td><td id="plscrg_8419_totpts" align="right" style="">0</td></tr>
+<tr style=""  id="plyr4532" class="playerTableBgRow1  "><td id="slot_4532" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_4532" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="4532" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Kevin Curtis</div>, Phi WR</NOBR></td><td id="opponent_4532"><div id="opponent_4532_281109021"><a href="http://sports.espn.go.com/nfl/clubhouse?team=nyg" target=_new>NYG</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109021_21_4532"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109021" target="_new">31-36 F</a></td><td id="plscrg_4532_totpts" align="right" style="font-weight:bold;">8</td></tr>
+<tr style=""  id="plyr9639" class="playerTableBgRow0  "><td id="slot_9639" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td id="playername_9639" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="9639" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Anthony Fasano</div>, Mia TE</NOBR></td><td id="opponent_9639"><div id="opponent_9639_281109015"><a href="http://sports.espn.go.com/nfl/clubhouse?team=sea" target=_new>Sea</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109015_15_9639"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109015" target="_new">21-19 F</a></td><td id="plscrg_9639_totpts" align="right" style="font-weight:bold;">1</td></tr>
+<tr style=""  id="plyr1575" class="playerTableBgRow1  "><td id="slot_1575" class="slot_21 playerSlot" style="font-weight: bold;">IR</td><td id="playername_1575" ><NOBR><div season_id="2008" league_id="97031" team_id="8" player_id="1575" tab_id="0" style="display:inline;text-decoration:underline;" class="hand popplayercard" >Matt Hasselbeck</div>, Sea QB&nbsp;&nbsp;<span title="Probable" style="font-weight:bold;cursor:default;" class="error">P</span></NOBR></td><td id="opponent_1575"><div id="opponent_1575_281109015"><a href="http://sports.espn.go.com/nfl/clubhouse?team=mia" target=_new>@Mia</a></div></td><td style="white-space:nowrap;" id="gamestatus_281109015_26_1575"><a href="http://sports-ak.espn.go.com/nfl/boxscore?gameId=281109015" target="_new">19-21 F</a></td><td id="plscrg_1575_totpts" align="right" style="font-weight:bold;">0</td></tr>
+</table>
+<table width="100%" border="0" cellpadding="2" cellspacing="1" class="tableBody" bgcolor="#ffffff" >
+<tr align=right valign=middle><td>BENCH POINTS: </td><td width=12% id="plscrg_inactivetotpts_9" bgcolor="#f2f2e8">16</td></tr>
+</table>
+<div style="padding: 3px;"><span class="bodyCopy">
+<div id="benchHideLink1" style="float:right;"><a href="javascript:toggleBench('hide', 2);">Hide Bench</a></div></span></div>
+</div>
+</td>
+</td></tr></table><table width="940px" cellpadding=0 cellspacing=0 border=0><tr valign=top><td width="710px"><div id="chatContainer"><div class="smackboardTitle" style="height:20px;">The Smack Board</div><table class="tableBody" id="chatTable" cellpadding="0" cellspacing="0" width="100%"><tr><td id="chatDivCell"><div id="chatDiv" style="height: 180px;"><div id="connectingSpinner" style="display:none;"><img src="http://games-ak.espn.go.com/s/ffllm/08/images/playerTableTabLoad.gif" /><span style="margin-left: 5px;"> Connecting ...</span></div></div></td></tr></table><div id="chatState">Idle</div><input type="text" autocomplete="off" class="select" id="chatInput" onkeyup="chat.inputKeyUp(event, this.value);" onfocus="chat.inputFocus()" disabled="true" value="Please wait while the Smack Board loads..." /><div id="chatSubmitDiv"><a id="chatSubmitButton" class="chatSubmitButtonEnabled" onclick="chat.sendMessage($('chatInput').value); return false;" href="#"></a></div></div><div style="padding: 8px 0 0 13px; clear: both;"><span class="bodyCopy">
+<a href="http://proxy.espn.go.com/chat/chatESPN?event_id=17618" target="_new" style="color:#999;">Give us your feedback</a></span></div>
+<span id="chatSwf"></span><br clear="all" />
+<script type="text/javascript">var timezoneOffset = 480  - 3 * 60;</script><script type="text/javascript" src="http://games-ak.espn.go.com/ffl/static/js/chatter"></script>
+	<script type="text/javascript">
+
+	/* SWFObject v2.1 <http://code.google.com/p/swfobject/>
+		Copyright (c) 2007-2008 Geoff Stearns, Michael Williams, and Bobby van der Sluis
+		This software is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+	*/
+	var swfobject=function(){var b="undefined",Q="object",n="Shockwave Flash",p="ShockwaveFlash.ShockwaveFlash",P="application/x-shockwave-flash",m="SWFObjectExprInst",j=window,K=document,T=navigator,o=[],N=[],i=[],d=[],J,Z=null,M=null,l=null,e=false,A=false;var h=function(){var v=typeof K.getElementById!=b&&typeof K.getElementsByTagName!=b&&typeof K.createElement!=b,AC=[0,0,0],x=null;if(typeof T.plugins!=b&&typeof T.plugins[n]==Q){x=T.plugins[n].description;if(x&&!(typeof T.mimeTypes!=b&&T.mimeTypes[P]&&!T.mimeTypes[P].enabledPlugin)){x=x.replace(/^.*\s+(\S+\s+\S+$)/,"$1");AC[0]=parseInt(x.replace(/^(.*)\..*$/,"$1"),10);AC[1]=parseInt(x.replace(/^.*\.(.*)\s.*$/,"$1"),10);AC[2]=/r/.test(x)?parseInt(x.replace(/^.*r(.*)$/,"$1"),10):0}}else{if(typeof j.ActiveXObject!=b){var y=null,AB=false;try{y=new ActiveXObject(p+".7")}catch(t){try{y=new ActiveXObject(p+".6");AC=[6,0,21];y.AllowScriptAccess="always"}catch(t){if(AC[0]==6){AB=true}}if(!AB){try{y=new ActiveXObject(p)}catch(t){}}}if(!AB&&y){try{x=y.GetVariable("$version");if(x){x=x.split(" ")[1].split(",");AC=[parseInt(x[0],10),parseInt(x[1],10),parseInt(x[2],10)]}}catch(t){}}}}var AD=T.userAgent.toLowerCase(),r=T.platform.toLowerCase(),AA=/webkit/.test(AD)?parseFloat(AD.replace(/^.*webkit\/(\d+(\.\d+)?).*$/,"$1")):false,q=false,z=r?/win/.test(r):/win/.test(AD),w=r?/mac/.test(r):/mac/.test(AD);/*@cc_on q=true;@if(@_win32)z=true;@elif(@_mac)w=true;@end@*/return{w3cdom:v,pv:AC,webkit:AA,ie:q,win:z,mac:w}}();var L=function(){if(!h.w3cdom){return }f(H);if(h.ie&&h.win){try{K.write("<script id=__ie_ondomload defer=true src=//:><\/script>");J=C("__ie_ondomload");if(J){I(J,"onreadystatechange",S)}}catch(q){}}if(h.webkit&&typeof K.readyState!=b){Z=setInterval(function(){if(/loaded|complete/.test(K.readyState)){E()}},10)}if(typeof K.addEventListener!=b){K.addEventListener("DOMContentLoaded",E,null)}R(E)}();function S(){if(J.readyState=="complete"){J.parentNode.removeChild(J);E()}}function E(){if(e){return }if(h.ie&&h.win){var v=a("span");try{var u=K.getElementsByTagName("body")[0].appendChild(v);u.parentNode.removeChild(u)}catch(w){return }}e=true;if(Z){clearInterval(Z);Z=null}var q=o.length;for(var r=0;r<q;r++){o[r]()}}function f(q){if(e){q()}else{o[o.length]=q}}function R(r){if(typeof j.addEventListener!=b){j.addEventListener("load",r,false)}else{if(typeof K.addEventListener!=b){K.addEventListener("load",r,false)}else{if(typeof j.attachEvent!=b){I(j,"onload",r)}else{if(typeof j.onload=="function"){var q=j.onload;j.onload=function(){q();r()}}else{j.onload=r}}}}}function H(){var t=N.length;for(var q=0;q<t;q++){var u=N[q].id;if(h.pv[0]>0){var r=C(u);if(r){N[q].width=r.getAttribute("width")?r.getAttribute("width"):"0";N[q].height=r.getAttribute("height")?r.getAttribute("height"):"0";if(c(N[q].swfVersion)){if(h.webkit&&h.webkit<312){Y(r)}W(u,true)}else{if(N[q].expressInstall&&!A&&c("6.0.65")&&(h.win||h.mac)){k(N[q])}else{O(r)}}}}else{W(u,true)}}}function Y(t){var q=t.getElementsByTagName(Q)[0];if(q){var w=a("embed"),y=q.attributes;if(y){var v=y.length;for(var u=0;u<v;u++){if(y[u].nodeName=="DATA"){w.setAttribute("src",y[u].nodeValue)}else{w.setAttribute(y[u].nodeName,y[u].nodeValue)}}}var x=q.childNodes;if(x){var z=x.length;for(var r=0;r<z;r++){if(x[r].nodeType==1&&x[r].nodeName=="PARAM"){w.setAttribute(x[r].getAttribute("name"),x[r].getAttribute("value"))}}}t.parentNode.replaceChild(w,t)}}function k(w){A=true;var u=C(w.id);if(u){if(w.altContentId){var y=C(w.altContentId);if(y){M=y;l=w.altContentId}}else{M=G(u)}if(!(/%$/.test(w.width))&&parseInt(w.width,10)<310){w.width="310"}if(!(/%$/.test(w.height))&&parseInt(w.height,10)<137){w.height="137"}K.title=K.title.slice(0,47)+" - Flash Player Installation";var z=h.ie&&h.win?"ActiveX":"PlugIn",q=K.title,r="MMredirectURL="+encodeURIComponent(j.location)+"&MMplayerType="+z+"&MMdoctitle="+q,x=w.id;if(h.ie&&h.win&&u.readyState!=4){var t=a("div");x+="SWFObjectNew";t.setAttribute("id",x);u.parentNode.insertBefore(t,u);u.style.display="none";var v=function(){u.parentNode.removeChild(u)};I(j,"onload",v)}U({data:w.expressInstall,id:m,width:w.width,height:w.height},{flashvars:r},x)}}function O(t){if(h.ie&&h.win&&t.readyState!=4){var r=a("div");t.parentNode.insertBefore(r,t);r.parentNode.replaceChild(G(t),r);t.style.display="none";var q=function(){t.parentNode.removeChild(t)};I(j,"onload",q)}else{t.parentNode.replaceChild(G(t),t)}}function G(v){var u=a("div");if(h.win&&h.ie){u.innerHTML=v.innerHTML}else{var r=v.getElementsByTagName(Q)[0];if(r){var w=r.childNodes;if(w){var q=w.length;for(var t=0;t<q;t++){if(!(w[t].nodeType==1&&w[t].nodeName=="PARAM")&&!(w[t].nodeType==8)){u.appendChild(w[t].cloneNode(true))}}}}}return u}function U(AG,AE,t){var q,v=C(t);if(v){if(typeof AG.id==b){AG.id=t}if(h.ie&&h.win){var AF="";for(var AB in AG){if(AG[AB]!=Object.prototype[AB]){if(AB.toLowerCase()=="data"){AE.movie=AG[AB]}else{if(AB.toLowerCase()=="styleclass"){AF+=' class="'+AG[AB]+'"'}else{if(AB.toLowerCase()!="classid"){AF+=" "+AB+'="'+AG[AB]+'"'}}}}}var AD="";for(var AA in AE){if(AE[AA]!=Object.prototype[AA]){AD+='<param name="'+AA+'" value="'+AE[AA]+'" />'}}v.outerHTML='<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"'+AF+">"+AD+"</object>";i[i.length]=AG.id;q=C(AG.id)}else{if(h.webkit&&h.webkit<312){var AC=a("embed");AC.setAttribute("type",P);for(var z in AG){if(AG[z]!=Object.prototype[z]){if(z.toLowerCase()=="data"){AC.setAttribute("src",AG[z])}else{if(z.toLowerCase()=="styleclass"){AC.setAttribute("class",AG[z])}else{if(z.toLowerCase()!="classid"){AC.setAttribute(z,AG[z])}}}}}for(var y in AE){if(AE[y]!=Object.prototype[y]){if(y.toLowerCase()!="movie"){AC.setAttribute(y,AE[y])}}}v.parentNode.replaceChild(AC,v);q=AC}else{var u=a(Q);u.setAttribute("type",P);for(var x in AG){if(AG[x]!=Object.prototype[x]){if(x.toLowerCase()=="styleclass"){u.setAttribute("class",AG[x])}else{if(x.toLowerCase()!="classid"){u.setAttribute(x,AG[x])}}}}for(var w in AE){if(AE[w]!=Object.prototype[w]&&w.toLowerCase()!="movie"){F(u,w,AE[w])}}v.parentNode.replaceChild(u,v);q=u}}}return q}function F(t,q,r){var u=a("param");u.setAttribute("name",q);u.setAttribute("value",r);t.appendChild(u)}function X(r){var q=C(r);if(q&&(q.nodeName=="OBJECT"||q.nodeName=="EMBED")){if(h.ie&&h.win){if(q.readyState==4){B(r)}else{j.attachEvent("onload",function(){B(r)})}}else{q.parentNode.removeChild(q)}}}function B(t){var r=C(t);if(r){for(var q in r){if(typeof r[q]=="function"){r[q]=null}}r.parentNode.removeChild(r)}}function C(t){var q=null;try{q=K.getElementById(t)}catch(r){}return q}function a(q){return K.createElement(q)}function I(t,q,r){t.attachEvent(q,r);d[d.length]=[t,q,r]}function c(t){var r=h.pv,q=t.split(".");q[0]=parseInt(q[0],10);q[1]=parseInt(q[1],10)||0;q[2]=parseInt(q[2],10)||0;return(r[0]>q[0]||(r[0]==q[0]&&r[1]>q[1])||(r[0]==q[0]&&r[1]==q[1]&&r[2]>=q[2]))?true:false}function V(v,r){if(h.ie&&h.mac){return }var u=K.getElementsByTagName("head")[0],t=a("style");t.setAttribute("type","text/css");t.setAttribute("media","screen");if(!(h.ie&&h.win)&&typeof K.createTextNode!=b){t.appendChild(K.createTextNode(v+" {"+r+"}"))}u.appendChild(t);if(h.ie&&h.win&&typeof K.styleSheets!=b&&K.styleSheets.length>0){var q=K.styleSheets[K.styleSheets.length-1];if(typeof q.addRule==Q){q.addRule(v,r)}}}function W(t,q){var r=q?"visible":"hidden";if(e&&C(t)){C(t).style.visibility=r}else{V("#"+t,"visibility:"+r)}}function g(s){var r=/[\\\"<>\.;]/;var q=r.exec(s)!=null;return q?encodeURIComponent(s):s}var D=function(){if(h.ie&&h.win){window.attachEvent("onunload",function(){var w=d.length;for(var v=0;v<w;v++){d[v][0].detachEvent(d[v][1],d[v][2])}var t=i.length;for(var u=0;u<t;u++){X(i[u])}for(var r in h){h[r]=null}h=null;for(var q in swfobject){swfobject[q]=null}swfobject=null})}}();return{registerObject:function(u,q,t){if(!h.w3cdom||!u||!q){return }var r={};r.id=u;r.swfVersion=q;r.expressInstall=t?t:false;N[N.length]=r;W(u,false)},getObjectById:function(v){var q=null;if(h.w3cdom){var t=C(v);if(t){var u=t.getElementsByTagName(Q)[0];if(!u||(u&&typeof t.SetVariable!=b)){q=t}else{if(typeof u.SetVariable!=b){q=u}}}}return q},embedSWF:function(x,AE,AB,AD,q,w,r,z,AC){if(!h.w3cdom||!x||!AE||!AB||!AD||!q){return }AB+="";AD+="";if(c(q)){W(AE,false);var AA={};if(AC&&typeof AC===Q){for(var v in AC){if(AC[v]!=Object.prototype[v]){AA[v]=AC[v]}}}AA.data=x;AA.width=AB;AA.height=AD;var y={};if(z&&typeof z===Q){for(var u in z){if(z[u]!=Object.prototype[u]){y[u]=z[u]}}}if(r&&typeof r===Q){for(var t in r){if(r[t]!=Object.prototype[t]){if(typeof y.flashvars!=b){y.flashvars+="&"+t+"="+r[t]}else{y.flashvars=t+"="+r[t]}}}}f(function(){U(AA,y,AE);if(AA.id==AE){W(AE,true)}})}else{if(w&&!A&&c("6.0.65")&&(h.win||h.mac)){A=true;W(AE,false);f(function(){var AF={};AF.id=AF.altContentId=AE;AF.width=AB;AF.height=AD;AF.expressInstall=w;k(AF)})}}},getFlashPlayerVersion:function(){return{major:h.pv[0],minor:h.pv[1],release:h.pv[2]}},hasFlashPlayerVersion:c,createSWF:function(t,r,q){if(h.w3cdom){return U(t,r,q)}else{return undefined}},removeSWF:function(q){if(h.w3cdom){X(q)}},createCSS:function(r,q){if(h.w3cdom){V(r,q)}},addDomLoadEvent:f,addLoadEvent:R,getQueryParamValue:function(v){var u=K.location.search||K.location.hash;if(v==null){return g(u)}if(u){var t=u.substring(1).split("&");for(var r=0;r<t.length;r++){if(t[r].substring(0,t[r].indexOf("="))==v){return g(t[r].substring((t[r].indexOf("=")+1)))}}}return""},expressInstallCallback:function(){if(A&&M){var q=C(m);if(q){q.parentNode.replaceChild(M,q);if(l){W(l,true);if(h.ie&&h.win){M.style.display="block"}}M=null;l=null;A=false}}}}}();
+	</script>
+	
+
+<script type="text/javascript">
+var chat;
+
+if(!swfobject.hasFlashPlayerVersion("9.0.0")) {
+	$(Chat.CHAT_DIV_ID).innerHTML = 'Flash 9 required.  <a href="http://www.adobe.com/products/flashplayer/">Click here</a> to download the free Flash player.';
+} else {
+	document.observe("dom:loaded", function() {
+			
+
+
+var chatAttributes = {
+	id: "FlexChat",
+	name: "FlexChat"
+};
+
+var chatParams = {
+	allowScriptAccess: "always"
+};
+
+var chatFlashvars = {
+	sessionId: "fDk3MDMxfDl8MTB8MjAwODF8MHxwA",
+	sessionName: escape("Z's League"),
+	memberId: 7610339,
+	memberName: escape("Sean Schulte"),
+	userProfileId: 7610339,
+
+	socketHost: "fantasychat.espn.go.com",
+	socketPort: 8080,
+	httpBaseUrl: escape("http://fantasychat.espn.go.com/c12-"),
+	
+	opsHack: "C12-",
+
+	onStateChange: "onStateChange",
+	onUserJoined: "onUserJoined",
+	onUserLeft: "onUserLeft",
+	onMessageSent: "onMessageSent",
+	onMessageReceived: "onMessageReceived",
+	filterWords: false,
+	autoJoin: false,
+	hidden: true
+};
+
+swfobject.embedSWF("http://games-ak.espn.go.com/s/ffllm/08/swf/FlexChat-101308.swf", "chatSwf", "1", "1", "9.0.0", false, chatFlashvars, chatParams, chatAttributes);
+			var thisUserObj = {userId: 7610339, memberId: 7610339, memberName: escape("Sean Schulte")};
+			chat = new Chat(thisUserObj, "The Smack Board");
+			Chat.AUTO_SHOW_SENT_MESSAGES = false;
+			Chat.SHOW_CHATTERS_PANE = false;
+		} 
+	);
+}
+</script></td><td>&nbsp;</td>
+<td width="220px">
+<div style="margin-top: 50px;"><div id="poll6971182" style="border: 1px  solid #dddddd;padding:6px;background-color:#efefef;;margin-left:0px;margin-bottom:0px;overflow:hidden;" class="tableBody">
+<b>Who will win this matchup?</b><br /><form name="frmPoll6971182"><div id="poll6971182_body" style="position:relative;display:block;margin-top:16px;"></div>
+<script type="text/javascript"> 
+p6971182 = new Poll({ pollCode: 6971182, isTeamVoting: false, isPassive: false, isAllowedToVote: true, maxBarWidth: 160, responseUrl: '/ffl/tools/pollvote?leagueId=97031&typeId=2&topicId=10005009&response=', options: new Array('St. Cloud Dueces', 'Team REPEAT'), votes: new Array(0, 0), pollResponse: new PollResponse(-1, "") }); 
+</script> 
+</div>
+</form>
+
+</div></td></tr>
+</table>
+</div>
+<br />
+<br><div style="padding: 3px;"><span class="bodyCopy">
+<span class="note"><b>Note:</b> Live statistics during gamedays are subject to change and should be considered unofficial. Live scoring and Smack Boards require the most recent version of Flash to be installed and javascript to be enabled in your browser.</span>
+</span></div>
+<!-- content ffl sport fantasy-->
+
+<div style="margin:16px 0px 5px 0px;">
+<script type="text/javascript">adsonar_placementId=1301426;adsonar_pid=580764;adsonar_ps=-1;adsonar_zw=956;adsonar_zh=215;adsonar_jv='ads.espn.adsonar.com';</script><script type="text/javascript" src="http://js.adsonar.com/js/adsonar.js"></script>
+</div>
+<script type="text/javascript">digGetAd("SponsoredByLogo63");</script></div></div></div>
+
+<!-- ////////// start: Transitional Footer ////////// -->
+<!--start transitional elements wrapper -->
+<div class="transitional-elements">
+<!--[if IE 6]><div class="ie6"><![endif]-->
+<!--[if IE 7]><div class="ie7"><![endif]-->
+<!--[if IE 8]><div class="ie8"><![endif]-->
+<div id="trans-footer" class="container">
+<p><strong><a href="http://www.espn.com">ESPN.com</a></strong>  |  <a href="https://r.espn.go.com/espn/memberServices">Member Services</a> | <a href="http://games.espn.go.com/frontpage">Fantasy Games</a> | <a href="http://games.espn.go.com/ffl/content?page=fflrulesindex2008">Help</a> | <a href="http://games.espn.go.com/ffl/feedback">Give Us Your Feedback</a></p>
+	
+<p>Call 1-888-549-ESPN for help on all things Fantasy</p>
+
+<p>Copyright &copy;2009 ESPN Internet Ventures. <a href="http://disney.go.com/corporate/legal/terms.html">Terms of Use</a> and <a href="http://disney.go.com/corporate/privacy/pp_espn.html">Privacy Policy and Safety Information/Your California Privacy Rights</a> are applicable to this site.<br><br>Officially Licensed Product of NFL PLAYERS. Visit <a href="http://www.nflplayers.com" target="new">www.nflplayers.com</a>.</p>
+</div>
+<!-- end transitional elements wrapper -->
+<!--[if lte IE 8]></div><![endif]-->
+</div>
+<!-- ////////// end: Transitional Footer ////////// -->
+
+
+
+</td></tr></table><script type="text/javascript">digGetAd("RevenueScience");</script><!-- headers[Accept]=[HTTP Accept=text/html]-->
+<!-- headers[Accept-Charset]=[ISO-8859-1]-->
+<!-- headers[Accept-Language]=[en-us]-->
+<!-- headers[Connection]=[keep-alive]-->
+<!-- headers[Cookie]=[SWID={4008934A-260A-4C6E-BC3B-B5D3B4DBEA5E}; CRBLM=CBLM-001:AAAAAAABADQAAABkAEAAAAABAEEAAAABAEcAAAABAFcAAAABAFEAAAACAFAAAAABAE0AAAABAE4AAAABAEgAAAABAEoAAAABAEsAAAABAEMAAAABAGIAAAAB; CRBLM_LAST_UPDATE=Sun, 11 Jan 2009 02:06:59 GMT; pb_ad=true; s_pers=%20s_c20%3D1231640323516%7C1326248323516%3B%20s_c20_s%3DFirst%2520Visit%7C1231642123516%3B%20s_c24%3D1231723729304%7C1326331729304%3B%20s_c24_s%3DLess%2520than%25201%2520day%7C1231725529304%3B%20s_gpv_pn%3Despn%253Afootball%253Affl%253Aschedule%7C1231725529311%3B; s_vi=[CS]v1|494493BF000054F3-A2B0B7C00000025[CE]; DETECT=1.0.0&106499&19857579&1&1; RegTrackX=/blogid=2187377-olney, buster blog:^storyid=38233|blog|olney_buster|mlb; FFLLM_COOKIE=AAAAARoAAAADAQAKZnJvbVRlYW1JZAMAAAAIAQAIc2Vhc29uSWQDAAAH2AEACGxlYWd1ZUlkAwABewc; SEEN2=IAQHaZCOrSwHbpEOlTAHSJIOlTAHSZIOQDEHt5IOljAHwpIO1iIHwpIOuSIHwpIOX/EGwpIOT2oGwpIOX/EGwpIOamoGwpIO:NAMAyZCONAMA8pCO; ibx={4008934A-260A-4C6E-BC3B-B5D3B4DBEA5E}|1229574651626; s_sess=%20s_sv_sid%3D747927283357%3B%20s_v4%3Dman%253A10%252Bcent%252Bbeer%252Bnight%3B%20s_cc%3Dtrue%3B%20s_omni_lid%3Datxt%252B%255Eespn%253Afootball%253Affl%253Aschedule%3B%20first_page%3D1%3B%20s_sq%3Dwdgespfantasy%252Cwdgespge%253D%252526pid%25253Despn%2525253Afootball%2525253Affl%2525253Aschedule%252526pidt%25253D1%252526oid%25253Dhttp%2525253A//games.espn.go.com/ffl/boxscorequick%2525253FleagueId%2525253D97031%25252526teamId%2525253D5%25252526scoringPeriodId%2525253D10%25252526seasonId%2525253D2008%25252526%252526ot%25253DA%3B; TSC=1; RED=AAAAAAAAAcRDAM8fMEp7Ph1CATd+/m1kasvJ/ZZOMQ4ydaOHNt25ccn/eHqQ6X6wqaPMUNLahCguMPiTXxo2PAbVMk4ijEicW0M6FIap1qcUQJSlWQVVhdRBycyjbVGqc4+qqZM8I8OO0hdk6Fwd8kWUppV6vzepgKJ0wQ1ReCMs7pxdKRbQdxvWOTWhHugIyMB0OnPDd2Kit8EsPbrIDiSlMfjdvL1gBeJTZFQHMR9/I2UCp2yz9fPiC9xe9h9BRCmNNW6tJcjm5/spX4I=; GREEN=d,6E34111A4C1C5C1E440B6A195D19431D57170A625C5F07480218450B4B5B1B21684B1B0000031D53055107381C0C0B510A1D0D00001C47594A59570006010A621F785401014E170D6E1E3901184F1C2C014078656D496E351F24011D19251F201D2868337A4E295D58603816625358590649010739600C0E530A150B00001B46584B5154070D777F0C08204E5B0A396A0910113E611748155C1733786E7D3750401C501F681735615F1D5C1A460B4B5C10531C461B0100001C5A0D540C451D010F510A1D0900001C47594A595700060101016B751F05014E1F046D1A481C1A491C5D1C440B6318541C461C561C6F1C511C52195C1A460B4B5C11531C461B0100001C5A0D540C451D010F510A1D0900001E47594A595700060101016B751F04014E1F046D1A481C1A491C5D1C440963195C1C476F561C6F1C511C52195C1A460B4B5C105B1C461B0100001C5A0D54044519010F510A1D0900001C475D4A595700060101016B711C73773A187266663F111B42682C11440E6319561C461557156A19501D59602817450B4F5A18541D411C0A757D111954164F104C5F7F06574C505C1E4F1804413A290D060A; BLUE=c7f1g5tdhwWWyVxnc7IIbz9xaTvc$7E593d36DTVvgcP7jaJB6sLUREfg1QG2flVyKeKr63112rwrmoDRMBmlbcvD$4YlKwwPU4A5TtkwkP2AR4SQQnZkZ1B3WBtndmS89uCqQUJOKDZfp19VhJp94GDIkzIlcm1OXvaQcbu1F47aWNpZ42GOGGUU#E4Vh0qk09dDsuIz$yr74ujT#hF9NdbaMt1jwlnxYuteYvi5qPYvNvIeBsOprqaEpL$wknWXAGr06i748DwAKWpg9SLsGDUHymaa1vD; DE2=dXNhO21uO3dlYnN0ZXI7Y2FibGU7NTs0OzQ7NjEzOzA0NC41MjQ7LTA5My4zNzA7ODQwOzI0OzM5OTE1OzY7dXM7; DS=Y29tY2FzdC5uZXQ7NzM3NDE1O2NvbWNhc3Q7; ZIP=60637; EMAIL=sirsean@gmail.com; __qca=1229206737-14153712-80966798; __qcb=1281460580; pop1_delivered=pop1_true; K7T8=2-2-85E41214CE55385E081ED7125A1C4E7BCCADFD602AAB74358B8A2E1565339511-7E131502A10ED4BD857643847A571321CC95265A36692A02617B87041AB6919B; K7T8SE=1]-->
+<!-- headers[Host]=[games.espn.go.com]-->
+<!-- headers[Keep-Alive]=[300]-->
+<!-- headers[Referer]=[http://games.espn.go.com/ffl/schedule?leagueId=97031]-->
+<!-- headers[Remote-IP]=[76.16.240.53]-->
+<!-- headers[User-Agent]=[Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.0.5) Gecko/2008120121 Firefox/3.0.5]-->
+
+<!-- SiteCatalyst code version: H.14. Copyright 1997-2007 Omniture, Inc. More info available at http://www.omniture.com -->
+
+<script language="JavaScript" src="http://a.espncdn.com/insertfiles/javascript/wa/analytics.js"></script>
+<script language="JavaScript">
+var s_account="wdgespfantasy";
+var omniPageName = "espn:football:ffl:boxscore";
+
+var insiderStatus = "";
+var anGen = "";
+var anYear = 0;
+var anLoginStatus = "";
+anParseLoginBarInfo(anCV);
+</script>
+
+<script language="JavaScript" src="http://a.espncdn.com/insertfiles/javascript/wa/sOmni.js"></script>
+<script language="JavaScript"><!--
+s_omni.pageName="football:ffl:boxscore";
+s_omni.server = window.location.host; // Server from the Host
+s_omni.channel = "football";
+s_omni.prop1 = "espn";
+s_omni.prop4 = "game-lm-free-custom";
+s_omni.prop5 = "football:ffl";
+if (insiderStatus != null) { s_omni.prop11 = insiderStatus + ":" + "premium-no" } else { s_omni.prop11 = "premium-no" }
+s_omni.prop17 = "en";
+s_omni.prop21 = anYear;
+s_omni.prop22 = anGen;
+s_omni.prop25 = "football";
+s_omni.prop29 = anLoginStatus;
+s_omni.prop30 = "n";
+s_omni.hier1 = "football:ffl:boxscore";
+s_omni.eVar7 = anYear + ":" + anGen + ":" + anLoginStatus + ":" + s_omni.prop11 + ":";
+s_omni.eVar9 = "en";
+s_omni.eVar13 = "football:ffl:boxscore";
+s_omni.eVar19 = "football";
+anParams = "{anPageName=boxscore, location=/football/ffl, columnist=, premium=N, hasAccess=, username=sean23007, automated=N, anContentSection=fantasy, anContentType=game-lm-free-custom}";
+allHashMap = "{0=football, 1=ffl, 2=boxscore}";
+anDebugCase = "ver_08Dec08_0_";
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s_omni.t();if(s_code)document.write(s_code)//--></script>
+<!-- End SiteCatalyst code version: H.15. -->
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+This is the ESPN Fantasy Football analyzer.
+
+Parses the HTML from the quick boxscore pages, and analyzes each team's optimum points for and against, as well as their actual and optimum records. This helps settle arguments about who has the better team and who got lucky.
+
+Plus, it calculates what players scored above their average against each team; this helps determine which players hate you.
+
+Usage:
+python espn-fantasy-football-analyzer.py --year=<year> [--startWeek=<startWeek>] [--endWeek=<endWeek>]
+
+Both the start week and end week are optional; if they're not given, it'll just analyze all the available weeks.
+
+The year is required.
+
+The boxscore HTML must be downloaded manually. The way it works is:
+
+YEAR/
+	WEEKS/
+		GAMES
+
+Each folder and file name should simply be a number, with no extensions. For example:
+
+2008/
+	1/
+		1
+		2
+		3
+	2/
+		1
+		2
+		3
+	3/
+		1
+		2
+		3
+etc
+
+
