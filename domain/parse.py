@@ -405,8 +405,12 @@ class TeamScoreLine:
 		# they get whichever score is higher from their third RB and third WR
 		if len(RBs) > 2:
 			thirdRB = RBs[2]
+		else:
+			thirdRB = None
 		if len(WRs) > 2:
 			thirdWR = WRs[2]
+		else:
+			thirdWR = None
 		if thirdRB and thirdWR:
 			if thirdRB.points > thirdWR.points:
 				self.optimumPoints += thirdRB.points
