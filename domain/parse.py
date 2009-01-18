@@ -1,5 +1,5 @@
 import re
-from domain.analysis import Team, Player
+from domain.analysis import Team, Player, PlayerPointsLine
 
 """
 Represent a fantasy football season.
@@ -150,12 +150,44 @@ class Season:
 			player.analyzeScores()
 
 	"""
+	Calculate which players scored above average for your bench, and below averge in your starting lineup.
+	"""
+	def analyzeTeamPlayers(self):
+		for game in self.games:
+			[ awayTeamName, homeTeamName] = game.teams.keys()
+			awayTeam = self.addTeam(awayTeamName)
+			homeTeam = self.addTeam(homeTeamName)
+
+			awayTeamScoreLine = game.teams[awayTeamName]
+			homeTeamScoreLine = game.teams[homeTeamName]
+
+			for playerScoreLine in awayTeamScoreLine.players:
+				player = self.getPlayerById(playerScoreLine.playerId)
+				pointsLine = PlayerPointsLine(player, playerScoreLine)
+
+				if pointsLine.isHighScoringBenchPlayer():
+					awayTeam.addHighScoringBenchPlayerPointsLine(pointsLine)
+				elif pointsLine.isLowScoringStarter():
+					awayTeam.addLowScoringStarterPlayerPointsLine(pointsLine)
+
+			for playerScoreLine in homeTeamScoreLine.players:
+				player = self.getPlayerById(playerScoreLine.playerId)
+				pointsLine = PlayerPointsLine(player, playerScoreLine)
+
+				if pointsLine.isHighScoringBenchPlayer():
+					homeTeam.addHighScoringBenchPlayerPointsLine(pointsLine)
+				elif pointsLine.isLowScoringStarter():
+					homeTeam.addLowScoringStarterPlayerPointsLine(pointsLine)
+
+
+	"""
 	Analyze all the players, games, and teams for this season.
 	"""
 	def analyze(self):
 		self.analyzePlayers()
 		self.analyzeGames()
 		self.analyzeTeams()
+		self.analyzeTeamPlayers()
 
 	"""
 	Print the summary of points scored by each team, both actual and optimal.
@@ -192,6 +224,24 @@ class Season:
 	def printPlayerScoreSummary(self):
 		for player in self.players:
 			print "%s: total points: %d; average points: %f" % (player.name, player.totalPoints, player.averagePoints)
+
+	"""
+	Print a summary of the players on each team that scored well on the bench.
+	"""
+	def printHighScoringBenchPlayersSummary(self):
+		for team in self.teams:
+			print team.name
+			for playerPointsLine in team.highScoringBenchPlayers:
+				print "%s, week %d: %d" % (playerPointsLine.name, playerPointsLine.week, playerPointsLine.weekPoints)
+
+	"""
+	Print a summary of the players on each team that scored badly while starting.
+	"""
+	def printLowScoringStartersSummary(self):
+		for team in self.teams:
+			print team.name
+			for line in team.lowScoringStarters:
+				print "%s, week %d: %d" % (line.name, line.week, line.weekPoints)
 
 """
 Represents a single game in a single week, between two teams.

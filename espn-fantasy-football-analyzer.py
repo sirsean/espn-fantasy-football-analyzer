@@ -111,4 +111,14 @@ if __name__ == '__main__':
 		print "Team Above Average Opposing Players Score Summary:"
 		season.printTeamAboveAverageOpposingPlayersSummary()
 
+	if "highScoringBenchPlayersSummary" in display:
+		print
+		print "High Scoring Bench Players:"
+		season.printHighScoringBenchPlayersSummary()
+
+	if "lowScoringStartersSummary" in display:
+		print
+		print "Low Scoring Starters:"
+		season.printLowScoringStartersSummary()
+
 

@@ -21,16 +21,32 @@ class Team:
 
 		self.aboveAverageOpposingPlayerPointsLines = []
 
+		self.highScoringBenchPlayers = []
+		self.lowScoringStarters = []
+
 	"""
 	Add a player points line to this team, to keep track of those players who scored above their average against this team.
 	"""
 	def addAboveAverageOpposingPlayerPointsLine(self, line):
 		self.aboveAverageOpposingPlayerPointsLines.append(line)
 
-		def line_sort(lineA, lineB):
-			return cmp(lineB.weekPoints - lineB.averagePoints, lineA.weekPoints - lineA.averagePoints)
+		self.aboveAverageOpposingPlayerPointsLines.sort(PlayerPointsLine.sortByDifferenceFromAverage)
 
-		self.aboveAverageOpposingPlayerPointsLines.sort(line_sort)
+	"""
+	Add a player points line to the high scoring bench players list.
+	"""
+	def addHighScoringBenchPlayerPointsLine(self, line):
+		self.highScoringBenchPlayers.append(line)
+
+		self.highScoringBenchPlayers.sort(PlayerPointsLine.sortByName)
+
+	"""
+	Add a player points line to the low scoring starters list.
+	"""
+	def addLowScoringStarterPlayerPointsLine(self, line):
+		self.lowScoringStarters.append(line)
+
+		self.lowScoringStarters.sort(PlayerPointsLine.sortByName)
 
 	"""
 	Get the total number of points scored against this team, over the course of the whole season, by players who scored more than their average in the game in which they faced this team.
@@ -93,9 +109,9 @@ class Player:
 		self.linesBelowAverage = []
 		for scoreLine in self.scoreLines:
 			if scoreLine.points > self.averagePoints:
-				self.linesAboveAverage.append(PlayerPointsLine(scoreLine.playerId, scoreLine.name, self.averagePoints, scoreLine.week, scoreLine.points))
+				self.linesAboveAverage.append(PlayerPointsLine(self, scoreLine))
 			elif scoreLine.points < self.averagePoints:
-				self.linesBelowAverage.append(PlayerPointsLine(scoreLine.playerId, scoreLine.name, self.averagePoints, scoreLine.week, scoreLine.points))
+				self.linesBelowAverage.append(PlayerPointsLine(self, scoreLine))
 
 	"""
 	Get this player's points line for the given week.
@@ -113,17 +129,38 @@ There will be many of these for each player, depending on how often they scored 
 This is not a definitive data source for anything; it's created on the fly from the actual score line.
 """
 class PlayerPointsLine:
-	def __init__(self, playerId, name, averagePoints, week, weekPoints):
-		self.playerId = playerId
-		self.name = name
-		self.averagePoints = averagePoints
-		self.week = week
-		self.weekPoints = weekPoints
+	def __init__(self, player, playerScoreLine):
+		self.scoreLine = playerScoreLine
+		self.playerId = player.playerId
+		self.name = player.name
+		self.averagePoints = player.averagePoints
+		self.week = playerScoreLine.week
+		self.weekPoints = playerScoreLine.points
+
+	"""
+	Determine if this line represents a high scoring bench player.
+	"""
+	def isHighScoringBenchPlayer(self):
+		return (self.scoreLine.slot == 'Bench' and self.weekPoints > 12)
+		#return (self.scoreLine.slot == 'Bench' and self.weekPoints > self.averagePoints)
+
+	"""
+	Determine if this line represents a low scoring starter.
+	"""
+	def isLowScoringStarter(self):
+		return (self.scoreLine.slot != 'Bench' and self.scoreLine.slot != 'IR' and self.weekPoints < 10)
+		#return (self.scoreLine.slot != 'Bench' and self.scoreLine.slot != 'IR' and self.weekPoints < self.averagePoints)
 
 	"""
 	Sorting function to sort by the difference between the week's points and the player's average, in descending order.
 	"""
 	def sortByDifferenceFromAverage(lineA, lineB):
 		return cmp(lineB.weekPoints - lineB.averagePoints, lineA.weekPoints - lineA.averagePoints)
+
+	"""
+	Sorting function to sort by the player's name.
+	"""
+	def sortByName(lineA, lineB):
+		return cmp(lineA.name, lineB.name)
 
 
