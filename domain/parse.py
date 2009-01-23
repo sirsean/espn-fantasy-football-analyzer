@@ -316,38 +316,11 @@ class GameScore:
 					teams[teamName] = []
 				continue
 
-			# if we find a line with the player id in it, we know we have the scoring line for a player
-			idSearch = re.search('id="plyr(\d+)"', line)
-			if idSearch:
-				playerId = idSearch.group(1)
-
-				# get the slot they're playing in
-				slotSearch = re.search('<td id="slot_\d+".*>([\w\/]+)</td><td', line)
-				if slotSearch:
-					slot = slotSearch.group(1)
-
-				# get the team id (this seems to be completely useless)
-				teamSearch = re.search('<div .* team_id="(\d+)"', line)
-				if teamSearch:
-					teamId = teamSearch.group(1)
-
-				# get the player's name and their position
-				playerSearch = re.search('<div.+>([\w\s\.\/\'-]+)</div>\*?, \w+ ([\w\/]+)', line)
-				if not playerSearch:
-					print line
-				if playerSearch:
-					playerName = playerSearch.group(1)
-					playerPosition = playerSearch.group(2)
-
-				# get the number of points they scored this week
-				pointsSearch = re.search('<td id="plscrg_\d+_totpts".*>(-?\d+)</td>', line)
-				if not pointsSearch:
-					print line
-				if pointsSearch:
-					points = int(pointsSearch.group(1))
-
-				player = PlayerScoreLine(self.week, playerId, teamId, playerName, playerPosition, slot, points)
+			try:
+				player = PlayerScoreLine(self.week, line)
 				teams[teamName].append(player)
+			except:
+				continue
 
 		for teamList in teams:
 			self.teams[teamList] = TeamScoreLine(self.week, teams[teamList])
@@ -356,17 +329,59 @@ class GameScore:
 Represents a single player's scoring line for a single game.
 """
 class PlayerScoreLine:
-	def __init__(self, week, playerId, teamId, name, position, slot, points):
+	def __init__(self, week, line):
+		self.line = line
 		self.week = week
-		self.playerId = playerId
-		self.teamId = teamId
-		self.name = name
-		self.position = position
-		self.slot = slot
-		self.points = points
-	
+		if self._parsePlayerId(line):
+			self.playerId = self._parsePlayerId(line)
+			self.teamId = self._parseTeamId(line)
+			( self.name, self.position ) = self._parseNameAndPosition(line)
+			self.slot = self._parseSlot(line)
+			self.points = self._parsePoints(line)
+		else:
+			raise Error("Cannot find player score")
+
 	def __str__(self):
 		return "week %s, player %s, team %s: %s, %s, %s, %s" % (self.week, self.playerId, self.teamId, self.name, self.position, self.slot, self.points)
+
+	def _parsePlayerId(self, line):
+		idSearch = re.search('id="plyr(\d+)"', line)
+		if idSearch:
+			return idSearch.group(1)
+		else:
+			raise Error("Cannot find playerId")
+
+	def _parseTeamId(self, line):
+		teamSearch = re.search('<div .* team_id="(\d+)"', line)
+		if teamSearch:
+			return teamSearch.group(1)
+		else:
+			raise Error("Cannot find team id")
+
+	def _parseNameAndPosition(self, line):
+		playerSearch = re.search('<div.+>([\w\s\.\/\'-]+)</div>\*?, \w+ ([\w\/]+)', line)
+		if playerSearch:
+			playerName = playerSearch.group(1)
+			playerPosition = playerSearch.group(2)
+			return (playerName, playerPosition)
+		else:
+			raise Error("Cannot find name and position")
+
+	def _parseSlot(self, line):
+		slotSearch = re.search('<td id="slot_\d+".*>([\w\/]+)</td><td', line)
+		if slotSearch:
+			return slotSearch.group(1)
+		else:
+			raise Error("Cannot find slot")
+
+
+	def _parsePoints(self, line):
+		pointsSearch = re.search('<td id="plscrg_\d+_totpts".*>(-?\d+)</td>', line)
+		if pointsSearch:
+			return int(pointsSearch.group(1))
+		else:
+			raise Error("Cannot find points")
+
 
 	"""
 	A comparison function to allow sorting players in a list
